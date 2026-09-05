@@ -244,14 +244,16 @@
 }
 .ws-eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--warm);
-  margin-bottom: 1rem;
-  display: block;
-  transition: color var(--dur-med) var(--ease-out);
+  color: #fff;
+  margin-bottom: 1.1rem;
+  display: inline-block;
+  padding: 5px 14px 4px;
+  border-radius: 999px;
+  align-self: flex-start;
 }
 .ws-title {
   font-family: var(--font-serif);

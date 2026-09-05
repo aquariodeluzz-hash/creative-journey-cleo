@@ -149,7 +149,12 @@ export default function WorkshopRow({ ws, index }) {
 
       {/* ── CONTEÚDO ── */}
       <div className="ws-content">
-        <span className="ws-eyebrow">Workshop {ws.num}</span>
+        <span
+          className="ws-eyebrow"
+          style={{ backgroundColor: ws.color, color: '#fff' }}
+        >
+          Workshop {ws.num}
+        </span>
         <h3 className="ws-title">{ws.title}</h3>
         <p className="ws-tagline">{ws.tagline}</p>
 

@@ -199,6 +199,11 @@ body::after {
   text-wrap: balance;
 }
 
+/* Compensa a navbar flutuante em anchor links */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
 /* Active press feedback em qualquer botão */
 button:active,
 a.btn-hero:active,

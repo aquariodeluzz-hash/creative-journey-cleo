@@ -7,10 +7,25 @@
 
 const ws = (folder, file) => `/ws/${folder}/${encodeURI(file)}`
 
+/* Paleta cromática exclusiva por workshop — cores suaves para o badge */
+const WS_COLORS = [
+  '#9b8aab', /* 01 · lavanda     */
+  '#7a9b8a', /* 02 · sage        */
+  '#c49a6c', /* 03 · âmbar       */
+  '#4a6fa5', /* 04 · índigo      */
+  '#b5738a', /* 05 · rosa antigo */
+  '#e8a87c', /* 06 · laranja sol */
+  '#5b8fa8', /* 07 · azul mar    */
+  '#7ab3a0', /* 08 · turquesa    */
+  '#a06090', /* 09 · violeta     */
+  '#d4a843', /* 10 · ouro        */
+]
+
 export const workshops = [
   {
     id: 1,
     num: '01',
+    color: WS_COLORS[0],
     title: '"Por Onde Andei"',
     tagline: 'Uma viagem pelas marcas da sua história',
     musica: null,
@@ -36,6 +51,7 @@ export const workshops = [
   {
     id: 2,
     num: '02',
+    color: WS_COLORS[1],
     title: '"Minhas Cores"',
     tagline: 'Luz e Sombra — Identidade em silhueta',
     musica: 'Sons para introspecção',
@@ -66,6 +82,7 @@ export const workshops = [
   {
     id: 3,
     num: '03',
+    color: WS_COLORS[2],
     title: '"Blend Pessoal"',
     tagline: 'Seu aroma único, sua pulseira difusora',
     musica: 'Música suave',
@@ -95,6 +112,7 @@ export const workshops = [
   {
     id: 4,
     num: '04',
+    color: WS_COLORS[3],
     title: '"A Noite e seus Mistérios"',
     tagline: 'Céu noturno · Lua · Amor incondicional',
     musica: 'Música para meditar',
@@ -122,6 +140,7 @@ export const workshops = [
   {
     id: 5,
     num: '05',
+    color: WS_COLORS[4],
     title: '"Cores, Aromas e Sabores"',
     tagline: 'Pintar com especiarias · Memórias da infância',
     musica: 'Músicas que remetem à infância',
@@ -149,6 +168,7 @@ export const workshops = [
   {
     id: 6,
     num: '06',
+    color: WS_COLORS[5],
     title: '"Alegria e Liberdade"',
     tagline: 'Caminhos Abstratos · Cores com o coração',
     musica: 'Música alegre',
@@ -175,6 +195,7 @@ export const workshops = [
   {
     id: 7,
     num: '07',
+    color: WS_COLORS[6],
     title: '"Brisa do Mar"',
     tagline: 'Paisagem · Horizonte · Pés na água',
     musica: 'Som do mar',
@@ -204,6 +225,7 @@ export const workshops = [
   {
     id: 8,
     num: '08',
+    color: WS_COLORS[7],
     title: '"Dança das Ondas"',
     tagline: 'Fluidez · Leveza · Ritmo próprio',
     musica: 'Sons de água e vento',
@@ -229,6 +251,7 @@ export const workshops = [
   {
     id: 9,
     num: '09',
+    color: WS_COLORS[8],
     title: '"Nossos Nós, Nossas Intenções"',
     tagline: 'Pulseira dos 7 Nós · Ancoragem de desejos',
     musica: 'Música calma de introspecção',
@@ -252,6 +275,7 @@ export const workshops = [
   {
     id: 10,
     num: '10',
+    color: WS_COLORS[9],
     title: '"Criando Mandalas"',
     tagline: 'Meditação · Simetria · Harmonia interior',
     musica: 'Música ambiente / Meditação',
