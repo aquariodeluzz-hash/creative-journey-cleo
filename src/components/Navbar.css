@@ -1,0 +1,184 @@
+/* ─── Floating pill nav — "detached from top" premium pattern ─── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+  pointer-events: none;
+}
+
+.nav-inner {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 clamp(1.25rem, 2.5vw, 2rem);
+  height: 58px;
+  max-width: 860px;
+  width: 100%;
+
+  /* Shell exterior — outer bezel */
+  background: rgba(247, 244, 239, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.9) inset,
+    0 12px 36px rgba(60, 50, 40, 0.10),
+    0 2px 8px  rgba(60, 50, 40, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition: background var(--dur-med) var(--ease-out),
+              box-shadow var(--dur-med) var(--ease-out),
+              border-color var(--dur-med) var(--ease-out);
+}
+
+.navbar.scrolled .nav-inner {
+  background: rgba(252, 250, 246, 0.94);
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.95) inset,
+    0 18px 48px rgba(60, 50, 40, 0.14),
+    0 4px 12px rgba(60, 50, 40, 0.08);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── Logo ── */
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.logo-main {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: 0.005em;
+}
+.logo-sub {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--warm);
+  transition: color var(--dur-med) var(--ease-out);
+}
+
+/* ── Nav links ── */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+  transition: color var(--dur-med) var(--ease-out);
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--warm); }
+
+/* CTA pill-within-pill */
+.nav-cta {
+  border: 1px solid var(--warm) !important;
+  padding: 0.4rem 1.1rem !important;
+  border-radius: 999px !important;
+  color: var(--warm) !important;
+  transition: background var(--dur-med) var(--ease-out),
+              color var(--dur-med) var(--ease-out) !important;
+  white-space: nowrap;
+}
+.nav-cta:hover {
+  background: var(--warm) !important;
+  color: var(--white) !important;
+}
+.nav-cta:active { transform: scale(0.96) !important; }
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--ink);
+  border-radius: 1px;
+  transition: transform var(--dur-med) var(--ease-out),
+              opacity var(--dur-med) var(--ease-out);
+  transform-origin: center;
+}
+
+/* Hamburger → X morphing */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ── Mobile menu — screen-filling overlay ── */
+.nav-mobile {
+  position: fixed;
+  inset: 0;
+  background: rgba(247, 244, 239, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 999;
+  animation: mobileIn var(--dur-med) var(--ease-out) both;
+}
+@keyframes mobileIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.nav-mobile a {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  transition: color var(--dur-med) var(--ease-out);
+  animation: linkSlideUp var(--dur-med) var(--ease-out) both;
+}
+.nav-mobile a:nth-child(1) { animation-delay: 0.04s; }
+.nav-mobile a:nth-child(2) { animation-delay: 0.08s; }
+.nav-mobile a:nth-child(3) { animation-delay: 0.12s; }
+.nav-mobile a:nth-child(4) { animation-delay: 0.16s; }
+.nav-mobile a:nth-child(5) { animation-delay: 0.20s; }
+@keyframes linkSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-mobile a:hover { color: var(--warm); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-inner { max-width: 100%; }
+}

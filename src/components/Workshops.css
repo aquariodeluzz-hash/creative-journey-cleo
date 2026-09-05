@@ -1,0 +1,17 @@
+.workshops { background: var(--white); }
+
+.workshops-header {
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem) 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.workshops-intro {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.82;
+  color: var(--ink-mid);
+  margin-top: 0.25rem;
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+.workshops-list { width: 100%; }

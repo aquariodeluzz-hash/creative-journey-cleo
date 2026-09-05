@@ -1,0 +1,108 @@
+.equipe {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--sage-light);
+  transition: background var(--dur-slow) var(--ease-out);
+}
+.equipe-header { text-align: center; margin-bottom: 4rem; }
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Double-bezel card — outer shell + inner core */
+.equipe-card {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 2.25rem;
+  padding: 2.75rem;
+  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset,
+              0 4px 20px rgba(0,0,0,0.04),
+              0 1px 4px rgba(0,0,0,0.03);
+  transition: transform  var(--dur-med) var(--ease-out),
+              box-shadow var(--dur-med) var(--ease-out);
+}
+.equipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset,
+              0 20px 56px rgba(110,143,134,0.14),
+              0 4px 12px rgba(0,0,0,0.06);
+}
+
+.equipe-img-wrap { overflow: hidden; flex-shrink: 0; }
+.equipe-img-wrap img {
+  width: 170px;
+  height: 230px;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(0.82) contrast(1.02);
+  transition: filter var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.equipe-card:hover .equipe-img-wrap img {
+  filter: saturate(1) contrast(1);
+  transform: scale(1.02);
+}
+
+.equipe-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+.equipe-cargo {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: 1.1rem;
+  display: block;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.equipe-bio {
+  font-size: 0.96rem;
+  font-weight: 300;
+  line-height: 1.82;
+  color: var(--ink-mid);
+  margin-bottom: 1.35rem;
+}
+
+/* Tags como pílulas suaves */
+.equipe-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.4rem; }
+.equipe-tags span {
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--warm-pale);
+  color: var(--warm);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  transition: background var(--dur-med) var(--ease-out),
+              border-color var(--dur-med) var(--ease-out),
+              color var(--dur-med) var(--ease-out);
+}
+.equipe-card:hover .equipe-tags span {
+  border-color: var(--warm-light);
+}
+
+.equipe-contact { display: flex; flex-direction: column; gap: 0.4rem; }
+.equipe-contact a {
+  font-size: 0.87rem;
+  font-weight: 300;
+  color: var(--ink-light);
+  transition: color var(--dur-med) var(--ease-out);
+}
+.equipe-contact a:hover { color: var(--warm); }
+
+@media (max-width: 1024px) { .equipe-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .equipe-card { grid-template-columns: 1fr; }
+  .equipe-img-wrap img { width: 100%; height: 260px; }
+}

@@ -1,0 +1,133 @@
+.conceito {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--sage-light);
+  transition: background var(--dur-slow) var(--ease-out);
+}
+.conceito-header { text-align: center; margin-bottom: 3rem; }
+
+/* Citação editorial — bloco de destaque com aspas visuais */
+.conceito-quote {
+  max-width: 780px;
+  margin: 0 auto 5rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.08rem, 2.2vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  text-align: center;
+  position: relative;
+  padding: 2.5rem 3rem;
+}
+.conceito-quote::before,
+.conceito-quote::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--warm);
+  opacity: 0.5;
+  transition: background var(--dur-med) var(--ease-out);
+}
+.conceito-quote::before { top: 0; }
+.conceito-quote::after  { bottom: 0; }
+
+.conceito-quote strong {
+  color: var(--warm);
+  font-weight: 500;
+  font-style: normal;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.conceito-quote em {
+  color: var(--ink);
+  font-style: normal;
+}
+
+/* Pilares — grelha de 3 com borda interna */
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 4rem;
+  background: var(--sage-mid);
+  border: 1px solid var(--sage-mid);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset;
+}
+.pilar {
+  padding: 3rem 2.5rem;
+  background: var(--white);
+  transition: background var(--dur-med) var(--ease-out);
+}
+.pilar:hover { background: var(--off-white); }
+.pilar-icon {
+  font-size: 1.2rem;
+  color: var(--warm);
+  margin-bottom: 1.4rem;
+  display: block;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.pilar h3 {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+  line-height: 1.35;
+}
+.pilar p {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.82;
+  color: var(--ink-mid);
+}
+
+/* Fases — timeline numerada */
+.fases {
+  border: 1px solid var(--parchment);
+  background: var(--white);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset,
+              0 4px 24px rgba(0,0,0,0.04);
+}
+.fase {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 2.75rem;
+  border-bottom: 1px solid var(--parchment);
+  align-items: start;
+  transition: background var(--dur-med) var(--ease-out);
+}
+.fase:last-child { border-bottom: none; }
+.fase:hover { background: var(--off-white); }
+.fase-num {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--sage-mid);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.fase:hover .fase-num { color: var(--warm-pale); }
+.fase-content h4 {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--warm);
+  margin-bottom: 0.65rem;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.fase-content p {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.82;
+  color: var(--ink-mid);
+}
+
+@media (max-width: 900px) {
+  .pilares-grid { grid-template-columns: 1fr; gap: 0; }
+  .conceito-quote { padding: 2rem 1.5rem; }
+  .fase { grid-template-columns: 48px 1fr; padding: 1.75rem; gap: 1rem; }
+}

@@ -1,0 +1,112 @@
+.depoimentos {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--parchment);
+  border-bottom: 1px solid var(--parchment);
+}
+
+.dep-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+.dep-header .section-title { margin-bottom: 0; }
+
+/* Layout assimétrico: 1 card grande + 2 menores */
+.dep-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: start;
+}
+
+.dep-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--parchment);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform 0.9s var(--ease-out),
+              box-shadow 0.9s var(--ease-out),
+              border-color 0.9s var(--ease-out);
+
+  /* Double-bezel inner highlight */
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset,
+              0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.dep-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset,
+              0 18px 48px rgba(0, 0, 0, 0.07);
+  border-color: var(--warm-pale);
+}
+
+/* Card principal — maior e mais impactante */
+.dep-card:first-child {
+  padding: clamp(2.5rem, 4vw, 3.5rem);
+  grid-row: span 1;
+}
+.dep-card:not(:first-child) {
+  padding: clamp(1.75rem, 2.5vw, 2.25rem);
+}
+
+.dep-mark {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 6vw, 6rem);
+  line-height: 0.55;
+  color: var(--warm);
+  font-style: italic;
+  font-weight: 300;
+  align-self: flex-start;
+  transition: color var(--dur-med) var(--ease-out);
+  opacity: 0.65;
+}
+.dep-card:first-child .dep-mark { font-size: clamp(5rem, 8vw, 8rem); }
+
+.dep-quote {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  font-style: italic;
+  letter-spacing: 0.005em;
+  margin: 0;
+  flex: 1;
+}
+.dep-card:first-child .dep-quote {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+.dep-card:not(:first-child) .dep-quote { font-size: 1rem; }
+
+.dep-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 1rem;
+  border-top: 1px solid var(--parchment);
+  margin-top: auto;
+}
+.dep-autor {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.dep-contexto {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--warm);
+  transition: color var(--dur-med) var(--ease-out);
+}
+
+@media (max-width: 900px) {
+  .dep-grid {
+    grid-template-columns: 1fr;
+  }
+  .dep-card:first-child { padding: clamp(2rem, 5vw, 2.75rem); }
+}

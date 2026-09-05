@@ -1,0 +1,107 @@
+.footer {
+  background: var(--ink);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--warm) 50%, transparent 100%);
+  opacity: 0.3;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4.5rem clamp(1.5rem, 5vw, 5rem) 3.5rem;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 5rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.footer-logo-main {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+.footer-logo-sub {
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-style: italic;
+  color: var(--warm-pale);
+  margin-bottom: 1rem;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.footer-brand p {
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-col-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--warm-pale);
+  margin-bottom: 1.1rem;
+  display: block;
+  opacity: 0.55;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 0.25rem;
+}
+.footer-links a,
+.footer-contact a {
+  font-size: 0.84rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.38);
+  transition: color var(--dur-med) var(--ease-out);
+  text-transform: capitalize;
+}
+.footer-links a:hover,
+.footer-contact a:hover { color: rgba(255, 255, 255, 0.72); }
+
+.footer-contact p {
+  font-family: var(--font-serif);
+  font-size: 0.96rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.5rem clamp(1.5rem, 5vw, 5rem);
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 3rem;
+  }
+}

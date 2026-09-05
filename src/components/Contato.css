@@ -1,0 +1,138 @@
+.contato {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--white);
+}
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+.contato-desc {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.88;
+  color: var(--ink-mid);
+  margin-bottom: 2.5rem;
+}
+
+/* Tabela de investimento */
+.invest-table {
+  border: 1px solid var(--parchment);
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset,
+              0 4px 20px rgba(0,0,0,0.03);
+}
+.invest-row { display: grid; grid-template-columns: 1.6fr 1fr 1fr; }
+.invest-row > span {
+  padding: 0.9rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  border-bottom: 1px solid var(--parchment);
+  line-height: 1.5;
+}
+.invest-row > span em {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--warm-light);
+  font-style: italic;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.invest-header > span {
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--parchment);
+  color: var(--warm);
+  transition: color var(--dur-med) var(--ease-out);
+}
+.invest-subtotal > span {
+  background: var(--off-white);
+  font-weight: 500;
+  color: var(--ink);
+}
+.invest-total > span {
+  background: var(--sage-light);
+  color: var(--ink);
+  font-size: 0.95rem;
+  border-bottom: none;
+  transition: background var(--dur-med) var(--ease-out);
+}
+.invest-total > span:last-child {
+  color: var(--warm);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  transition: color var(--dur-med) var(--ease-out);
+}
+
+/* Formulário */
+.contato-form-wrap { padding-top: 4.5rem; }
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.45rem; }
+.form-group label {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+.form-group input,
+.form-group textarea {
+  background: var(--off-white);
+  border: 1px solid var(--parchment);
+  padding: 0.9rem 1.1rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--dur-med) var(--ease-out),
+              background   var(--dur-med) var(--ease-out),
+              box-shadow   var(--dur-med) var(--ease-out);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--warm);
+  background: var(--white);
+  box-shadow: 0 0 0 3px var(--warm-pale);
+}
+
+/* Botão submit — pill premium */
+.btn-submit {
+  background: var(--warm);
+  color: var(--white);
+  border: 1px solid var(--warm);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background var(--dur-med) var(--ease-out),
+              border-color var(--dur-med) var(--ease-out),
+              transform  160ms var(--ease-out),
+              box-shadow var(--dur-med) var(--ease-out);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.btn-submit:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+}
+.btn-submit:active { transform: scale(0.97); }
+
+@media (max-width: 900px) {
+  .contato-grid { grid-template-columns: 1fr; }
+  .contato-form-wrap { padding-top: 0; }
+}
+@media (max-width: 600px) {
+  .invest-row { grid-template-columns: 1fr 1fr; }
+  .invest-row > span:nth-child(2) { display: none; }
+}

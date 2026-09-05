@@ -1,0 +1,245 @@
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--sage);
+}
+
+/* ═════════════════════════════════════════════════════════
+   CÉU · GRADIENTE ATMOSFÉRICO
+   Camadas empilhadas: aurora, horizonte, sol, poeira estelar.
+   As cores adaptam-se ao raio ativo via --warm e --sage.
+   ═════════════════════════════════════════════════════════ */
+.hero-sky {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background:
+    /* Camada 1 · Céu superior (frio) */
+    linear-gradient(
+      180deg,
+      var(--sage-light) 0%,
+      var(--sage) 42%,
+      var(--warm-pale) 72%,
+      var(--white) 100%
+    );
+}
+
+/* Auroras suaves */
+.hero-sky::before {
+  content: '';
+  position: absolute;
+  inset: -10%;
+  background:
+    radial-gradient(ellipse 65% 45% at 22% 22%,  rgba(255,255,255,0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 40% at 78% 18%,  rgba(255,255,255,0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 55% at 50% 96%,  rgba(255,255,255,0.75) 0%, transparent 55%);
+  filter: blur(6px);
+  pointer-events: none;
+  animation: skyDrift 40s var(--ease-soft) infinite alternate;
+}
+
+/* Sol distante + reflexo cromático (usa a cor do raio) */
+.hero-sky::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  right: 14%;
+  width: clamp(220px, 28vw, 460px);
+  height: clamp(220px, 28vw, 460px);
+  background: radial-gradient(circle at center,
+    rgba(255, 250, 240, 0.85) 0%,
+    rgba(255, 245, 225, 0.5) 22%,
+    var(--warm-pale) 42%,
+    transparent 68%);
+  filter: blur(2px);
+  border-radius: 50%;
+  opacity: 0.65;
+  pointer-events: none;
+  animation: sunGlow 12s var(--ease-soft) infinite alternate;
+}
+
+@keyframes skyDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-3%, 2%, 0) scale(1.05); }
+}
+@keyframes sunGlow {
+  0%   { opacity: 0.55; transform: scale(1); }
+  100% { opacity: 0.75; transform: scale(1.06); }
+}
+
+/* Poeira estelar / partículas sutis */
+.hero-stars {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.55), transparent 60%),
+    radial-gradient(1px 1px at 88% 34%, rgba(255,255,255,0.45), transparent 60%),
+    radial-gradient(1px 1px at 42% 15%, rgba(255,255,255,0.6),  transparent 60%),
+    radial-gradient(1px 1px at 68% 8%,  rgba(255,255,255,0.35), transparent 60%),
+    radial-gradient(1.5px 1.5px at 24% 55%, rgba(255,255,255,0.45), transparent 60%),
+    radial-gradient(1px 1px at 78% 62%, rgba(255,255,255,0.4),  transparent 60%),
+    radial-gradient(1px 1px at 56% 40%, rgba(255,255,255,0.5),  transparent 60%);
+  opacity: 0.85;
+  animation: starTwinkle 6s var(--ease-soft) infinite alternate;
+}
+@keyframes starTwinkle {
+  0%   { opacity: 0.55; }
+  100% { opacity: 0.95; }
+}
+
+/* Névoa dourada sobre o horizonte inferior — sensação de amanhecer */
+.hero-haze {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.65) 0%,
+    rgba(255, 255, 255, 0.2) 55%,
+    transparent 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ═════════════════════════════════════════════════════════
+   CONTEÚDO
+   ═════════════════════════════════════════════════════════ */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 940px;
+  padding: 0 2rem;
+}
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: 2rem;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.6rem, 9.2vw, 8rem);
+  font-weight: 300;
+  line-height: 0.98;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.012em;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--warm);
+  transition: color var(--dur-med) var(--ease-out);
+}
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(0.98rem, 2vw, 1.15rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--ink-mid);
+  margin-bottom: 2.25rem;
+  line-height: 1.85;
+}
+.hero-subtitle span {
+  color: var(--warm);
+  letter-spacing: 0.22em;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.6rem;
+  transition: color var(--dur-med) var(--ease-out);
+}
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--sage-dark);
+  margin: 0 auto 1.9rem;
+  transition: background var(--dur-med) var(--ease-out);
+}
+.hero-desc {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  letter-spacing: 0.02em;
+  margin-bottom: 2.75rem;
+  font-style: italic;
+  line-height: 1.75;
+  font-family: var(--font-serif);
+}
+.btn-hero {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 1.15rem 2.75rem;
+  transition: color 0.9s var(--ease-out);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+.btn-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s var(--ease-out);
+  z-index: -1;
+}
+.btn-hero:hover { color: var(--white); }
+.btn-hero:hover::before { transform: scaleX(1); }
+.btn-hero:active { transform: scale(0.97); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  z-index: 2;
+}
+.hero-scroll span {
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+.scroll-line {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom, var(--sage-dark), transparent);
+  animation: scrollPulse 3.2s var(--ease-soft) infinite;
+  transform-origin: top;
+}
+@keyframes scrollPulse {
+  0%,100% { opacity: 0.5; transform: scaleY(1); }
+  50%     { opacity: 1;   transform: scaleY(1.18); }
+}
+
+@media (max-width: 640px) {
+  .hero-sky::after { top: 12%; right: 8%; }
+}
