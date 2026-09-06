@@ -9,8 +9,8 @@ const v = (delay = 0) => ({
 })
 
 const tableRows = [
-  { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 180,00', total: '€ 900,00' },
-  { prof: 'Suri Meirelles', cargo: 'Assistente', hora: '€ 45,00', total: '€ 225,00' },
+  { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 100,00/h', total: '€ 500,00' },
+  { prof: 'Suri Meirelles', cargo: 'Assistente', hora: '€ 30,00/h', total: '€ 150,00' },
 ]
 
 export default function Contato() {
@@ -42,12 +42,15 @@ export default function Contato() {
               <div className="invest-row invest-subtotal">
                 <span>Total por Workshop</span>
                 <span></span>
-                <span>€ 1.125,00</span>
+                <span>€ 650,00</span>
               </div>
               <div className="invest-row invest-total">
                 <span>Investimento Total<br /><em>10 Workshops + Materiais</em></span>
                 <span></span>
-                <span>€ 12.090,00</span>
+                <span>€ 7.000,00</span>
+              </div>
+              <div className="invest-row invest-note">
+                <span><em>*Valor referente a 10 workshops completos de 4 horas de execução + 1 hora de preparação cada, incluindo todos os materiais para 40 pessoas por sessão. Condição especial de lançamento para primeira temporada em navios MSC.</em></span>
               </div>
             </div>
           </motion.div>

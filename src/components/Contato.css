@@ -68,6 +68,17 @@
   transition: color var(--dur-med) var(--ease-out);
 }
 
+.invest-note > span {
+  grid-column: 1 / -1;
+  background: transparent;
+  border-bottom: none;
+  font-size: 0.78rem;
+  color: var(--warm);
+  opacity: 0.8;
+  padding-top: 0.25rem;
+  line-height: 1.55;
+}
+
 /* Formulário */
 .contato-form-wrap { padding-top: 4.5rem; }
 .form { display: flex; flex-direction: column; gap: 1.25rem; }
