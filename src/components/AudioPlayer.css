@@ -1,8 +1,8 @@
 .audio-ball {
   position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) scale(0.7);
+  right: clamp(1rem, 2.5vw, 2rem);
+  bottom: calc(clamp(1rem, 2.5vw, 2rem) + 60px);
+  transform: scale(0.7);
   z-index: 900;
   width: 44px;
   height: 44px;
@@ -31,7 +31,7 @@
 
 .audio-ball.is-visible {
   opacity: 1;
-  transform: translateX(-50%) scale(1);
+  transform: scale(1);
   pointer-events: auto;
 }
 
@@ -41,11 +41,11 @@
     0 2px 0 rgba(255,255,255,0.95) inset,
     0 12px 32px rgba(60,50,40,0.22),
     0 4px 10px rgba(60,50,40,0.12);
-  transform: translateX(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 
 .audio-ball:active {
-  transform: translateX(-50%) scale(0.95);
+  transform: scale(0.95);
 }
 
 /* Ripple animation when playing */
