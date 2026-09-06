@@ -1,18 +1,22 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLang } from '../i18n/LangContext'
 import './Navbar.css'
 
 const FLAGS = [
-  { code: 'pt', flag: '🇧🇷', label: 'PT' },
-  { code: 'en', flag: '🇬🇧', label: 'EN' },
-  { code: 'es', flag: '🇪🇸', label: 'ES' },
-  { code: 'fr', flag: '🇫🇷', label: 'FR' },
+  { code: 'pt', flag: '🇧🇷', label: 'Português' },
+  { code: 'en', flag: '🇬🇧', label: 'English' },
+  { code: 'es', flag: '🇪🇸', label: 'Español' },
+  { code: 'fr', flag: '🇫🇷', label: 'Français' },
 ]
 
 export default function Navbar() {
   const { t, lang, setLang } = useLang()
-  const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled,  setScrolled]  = useState(false)
+  const [menuOpen,  setMenuOpen]  = useState(false)
+  const [langOpen,  setLangOpen]  = useState(false)
+  const langRef = useRef(null)
+
+  const current = FLAGS.find(f => f.code === lang) ?? FLAGS[0]
 
   const links = [
     { href: '#sobre',     label: t.nav.sobre },
@@ -32,6 +36,16 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
+  // Fecha dropdown ao clicar fora
+  useEffect(() => {
+    if (!langOpen) return
+    const onOutside = (e) => {
+      if (langRef.current && !langRef.current.contains(e.target)) setLangOpen(false)
+    }
+    document.addEventListener('mousedown', onOutside)
+    return () => document.removeEventListener('mousedown', onOutside)
+  }, [langOpen])
+
   const scrollTo = (href) => {
     setMenuOpen(false)
     const target = document.querySelector(href)
@@ -44,6 +58,11 @@ export default function Navbar() {
   const handleLink = (e, href) => {
     e.preventDefault()
     scrollTo(href)
+  }
+
+  const pickLang = (code) => {
+    setLang(code)
+    setLangOpen(false)
   }
 
   return (
@@ -68,19 +87,40 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <div className="nav-lang">
-            {FLAGS.map(f => (
-              <button
-                key={f.code}
-                className={`lang-btn${lang === f.code ? ' active' : ''}`}
-                onClick={() => setLang(f.code)}
-                aria-label={f.label}
-                title={f.label}
-              >
-                <span className="lang-flag">{f.flag}</span>
-                <span className="lang-code">{f.label}</span>
-              </button>
-            ))}
+          {/* Seletor de idioma — dropdown */}
+          <div className={`nav-lang-picker${langOpen ? ' is-open' : ''}`} ref={langRef}>
+            <button
+              className="lang-trigger"
+              onClick={() => setLangOpen(o => !o)}
+              aria-expanded={langOpen}
+              aria-label="Selecionar idioma"
+            >
+              <span className="lang-flag">{current.flag}</span>
+              <svg className="lang-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+
+            <ul className="lang-dropdown" role="listbox" aria-label="Idiomas">
+              {FLAGS.map(f => (
+                <li key={f.code}>
+                  <button
+                    role="option"
+                    aria-selected={lang === f.code}
+                    className={`lang-option${lang === f.code ? ' is-active' : ''}`}
+                    onClick={() => pickLang(f.code)}
+                  >
+                    <span>{f.flag}</span>
+                    <span>{f.label}</span>
+                    {lang === f.code && (
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <button
@@ -106,10 +146,11 @@ export default function Navbar() {
             {FLAGS.map(f => (
               <button
                 key={f.code}
-                className={`lang-btn${lang === f.code ? ' active' : ''}`}
-                onClick={() => setLang(f.code)}
+                className={`lang-option${lang === f.code ? ' is-active' : ''}`}
+                onClick={() => { pickLang(f.code); setMenuOpen(false) }}
               >
-                {f.flag} {f.label}
+                <span>{f.flag}</span>
+                <span>{f.label}</span>
               </button>
             ))}
           </div>
