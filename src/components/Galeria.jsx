@@ -8,16 +8,8 @@ import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/captions.css'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
 import { galeriaImages } from '../data/workshops'
+import { useLang } from '../i18n/LangContext'
 import './Galeria.css'
-
-const FILTERS = [
-  { key: 'all',         label: 'Todas' },
-  { key: 'aquarela',   label: 'Aquarela' },
-  { key: 'abstrato',   label: 'Abstratos' },
-  { key: 'mandala',    label: 'Mandalas' },
-  { key: 'silhueta',   label: 'Silhuetas' },
-  { key: 'especiarias', label: 'Especiarias' },
-]
 
 const fadeUp = {
   initial: { opacity: 0, y: 28 },
@@ -27,6 +19,8 @@ const fadeUp = {
 }
 
 export default function Galeria() {
+  const { t } = useLang()
+  const g = t.galeria
   const [filter, setFilter]   = useState('all')
   const [index,  setIndex]    = useState(-1)
 
@@ -41,16 +35,13 @@ export default function Galeria() {
     <section className="galeria" id="galeria">
       <div className="container">
         <motion.div className="galeria-header" {...fadeUp}>
-          <span className="section-eyebrow">Portfólio de Obras</span>
-          <h2 className="section-title">Galeria<br /><em>de Arte</em></h2>
-          <p className="galeria-intro">
-            Obras produzidas nas vivências do Creative Journey — cada peça carrega
-            a frequência do seu criador.
-          </p>
+          <span className="section-eyebrow">{g.eyebrow}</span>
+          <h2 className="section-title">{g.titleLine1}<br /><em>{g.titleEm}</em></h2>
+          <p className="galeria-intro">{g.intro}</p>
         </motion.div>
 
         <motion.div className="galeria-filters" {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }}>
-          {FILTERS.map(f => (
+          {g.filters.map(f => (
             <button
               key={f.key}
               className={`filter-btn${filter === f.key ? ' active' : ''}`}

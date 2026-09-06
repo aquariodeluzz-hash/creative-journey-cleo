@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useLang } from '../i18n/LangContext'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, A11y, EffectFade, Keyboard } from 'swiper/modules'
 import Lightbox from 'yet-another-react-lightbox'
@@ -24,6 +25,8 @@ const fadeUp = {
 }
 
 export default function WorkshopRow({ ws, index }) {
+  const { t } = useLang()
+  const L = t.workshops.labels
   const isAlt = index % 2 !== 0
   const prevRef = useRef(null)
   const nextRef = useRef(null)
@@ -34,7 +37,7 @@ export default function WorkshopRow({ ws, index }) {
   const slides = ws.images.map((src, i) => ({
     src,
     title: ws.title.replace(/"/g, ''),
-    description: `${ws.tagline} · Obra ${String(i + 1).padStart(2, '0')} de ${String(ws.images.length).padStart(2, '0')}`,
+    description: `${ws.tagline} · ${String(i + 1).padStart(2, '0')} / ${String(ws.images.length).padStart(2, '0')}`,
   }))
 
   const openLightbox = (i) => setLightboxIndex(i ?? active)
@@ -97,12 +100,12 @@ export default function WorkshopRow({ ws, index }) {
 
           {ws.images.length > 1 && (
             <>
-              <button ref={prevRef} className="ws-nav ws-nav--prev" aria-label="Foto anterior">
+              <button ref={prevRef} className="ws-nav ws-nav--prev" aria-label={L.prevFoto}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
-              <button ref={nextRef} className="ws-nav ws-nav--next" aria-label="Próxima foto">
+              <button ref={nextRef} className="ws-nav ws-nav--next" aria-label={L.nextFoto}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -110,7 +113,7 @@ export default function WorkshopRow({ ws, index }) {
             </>
           )}
 
-          <button className="ws-expand" onClick={() => openLightbox(active)} aria-label="Ver em tela cheia">
+          <button className="ws-expand" onClick={() => openLightbox(active)} aria-label={L.fullscreen}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -130,13 +133,13 @@ export default function WorkshopRow({ ws, index }) {
         </div>
 
         {ws.images.length > 1 && (
-          <div className="ws-thumbs" role="tablist" aria-label={`Miniaturas — ${ws.title}`}>
+          <div className="ws-thumbs" role="tablist" aria-label={L.thumbs(ws.title)}>
             {ws.images.map((src, i) => (
               <button
                 key={i}
                 role="tab"
                 aria-selected={i === active}
-                aria-label={`Ver obra ${i + 1}`}
+                aria-label={L.verObra(i + 1)}
                 className={`ws-thumb${i === active ? ' is-active' : ''}`}
                 onClick={() => goTo(i)}
               >
@@ -153,7 +156,7 @@ export default function WorkshopRow({ ws, index }) {
           className="ws-eyebrow"
           style={{ backgroundColor: ws.color, color: '#fff' }}
         >
-          Workshop {ws.num}
+          {L.workshop} {ws.num}
         </span>
         <h3 className="ws-title">{ws.title}</h3>
         <p className="ws-tagline">{ws.tagline}</p>
@@ -161,22 +164,22 @@ export default function WorkshopRow({ ws, index }) {
         <div className="ws-details">
           {ws.musica && (
             <div className="ws-detail-row">
-              <span className="ws-detail-label">Música</span>
+              <span className="ws-detail-label">{L.musica}</span>
               <span className="ws-detail-val">{ws.musica}</span>
             </div>
           )}
           {ws.aroma && (
             <div className="ws-detail-row">
-              <span className="ws-detail-label">Aroma</span>
+              <span className="ws-detail-label">{L.aroma}</span>
               <span className="ws-detail-val">{ws.aroma}</span>
             </div>
           )}
           <div className="ws-detail-row">
-            <span className="ws-detail-label">Técnica</span>
+            <span className="ws-detail-label">{L.tecnica}</span>
             <span className="ws-detail-val">{ws.tecnica}</span>
           </div>
           <div className="ws-detail-row">
-            <span className="ws-detail-label">Turma</span>
+            <span className="ws-detail-label">{L.turma}</span>
             <span className="ws-detail-val">{ws.capacidade}</span>
           </div>
         </div>
@@ -184,19 +187,19 @@ export default function WorkshopRow({ ws, index }) {
         <div className="ws-phases">
           {ws.acolhimento && (
             <div className="ws-phase">
-              <span className="ws-phase-label">Acolhimento</span>
+              <span className="ws-phase-label">{L.acolhimento}</span>
               <p className="ws-phase-text">{ws.acolhimento}</p>
             </div>
           )}
           {ws.desenvolvimento && (
             <div className="ws-phase">
-              <span className="ws-phase-label">Desenvolvimento</span>
+              <span className="ws-phase-label">{L.desenvolvimento}</span>
               <p className="ws-phase-text">{ws.desenvolvimento}</p>
             </div>
           )}
           {ws.encerramento && (
             <div className="ws-phase">
-              <span className="ws-phase-label">Encerramento</span>
+              <span className="ws-phase-label">{L.encerramento}</span>
               <p className="ws-phase-text">{ws.encerramento}</p>
             </div>
           )}
@@ -204,7 +207,7 @@ export default function WorkshopRow({ ws, index }) {
 
         {ws.materiais && ws.materiais.length > 0 && (
           <div className="ws-materiais">
-            <span className="ws-materiais-label">Materiais</span>
+            <span className="ws-materiais-label">{L.materiais}</span>
             <ul className="ws-materiais-list">
               {ws.materiais.map((m, i) => <li key={i}>{m}</li>)}
             </ul>
@@ -217,7 +220,7 @@ export default function WorkshopRow({ ws, index }) {
             className="ws-gallery-cta"
             onClick={() => openLightbox(active)}
           >
-            <span>Ver galeria completa · {ws.images.length} obras</span>
+            <span>{L.gallery(ws.images.length)}</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

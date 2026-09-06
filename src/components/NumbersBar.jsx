@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useLang } from '../i18n/LangContext'
 import './NumbersBar.css'
 
 function Counter({ target, suffix = '' }) {
@@ -30,14 +31,15 @@ function Counter({ target, suffix = '' }) {
   return <span ref={ref} className="number-val">{val}{suffix}</span>
 }
 
-const items = [
-  { target: 10,  suffix: '',   label: 'Workshops Exclusivos' },
-  { target: 40,  suffix: '+',  label: 'Anos de Experiência' },
-  { target: 3,   suffix: '',   label: 'Modalidades Terapêuticas' },
-  { target: 600, suffix: 'h', label: 'Formação Holística' },
-]
-
 export default function NumbersBar() {
+  const { t } = useLang()
+  const n = t.numbers
+  const items = [
+    { target: 10,  suffix: '',   label: n.workshops },
+    { target: 40,  suffix: '+',  label: n.experiencia },
+    { target: 3,   suffix: '',   label: n.modalidades },
+    { target: 600, suffix: 'h',  label: n.formacao },
+  ]
   return (
     <section className="numbers-bar">
       <div className="numbers-inner">

@@ -74,6 +74,50 @@
   100% { opacity: 0.75; transform: scale(1.06); }
 }
 
+/* ═════════════════════════════════════════════════════════
+   AURORA BOREAL — duas camadas que se cruzam lentamente
+   Cores: verde-esmeralda, lilás, teal. Opacidade muito sutil.
+   ═════════════════════════════════════════════════════════ */
+.hero-aurora {
+  position: absolute;
+  inset: -20% -10%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 38% at 30% 28%,  rgba(80, 220, 160, 0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 30% at 72% 18%,  rgba(140, 90, 240, 0.11) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 28% at 55% 38%,  rgba(0,  200, 200, 0.09) 0%, transparent 70%);
+  filter: blur(32px);
+  animation: auroraShift1 28s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+.hero-aurora-2 {
+  position: absolute;
+  inset: -20% -10%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 32% at 70% 32%,  rgba(60,  200, 130, 0.10) 0%, transparent 68%),
+    radial-gradient(ellipse 55% 26% at 20% 20%,  rgba(180, 110, 255, 0.09) 0%, transparent 62%),
+    radial-gradient(ellipse 75% 35% at 48% 22%,  rgba(0,  180, 220, 0.07) 0%, transparent 72%);
+  filter: blur(44px);
+  animation: auroraShift2 38s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+
+@keyframes auroraShift1 {
+  0%   { transform: translate3d(0,    0,   0) scale(1);    opacity: 0.55; }
+  33%  { transform: translate3d(4%,  -3%,  0) scale(1.06); opacity: 0.80; }
+  66%  { transform: translate3d(-5%,  4%,  0) scale(0.97); opacity: 0.65; }
+  100% { transform: translate3d(3%,   2%,  0) scale(1.04); opacity: 0.90; }
+}
+@keyframes auroraShift2 {
+  0%   { transform: translate3d(0,    0,   0) scale(1.02); opacity: 0.45; }
+  40%  { transform: translate3d(-4%,  3%,  0) scale(0.96); opacity: 0.75; }
+  75%  { transform: translate3d(5%,  -4%,  0) scale(1.07); opacity: 0.55; }
+  100% { transform: translate3d(-2%,  2%,  0) scale(1);    opacity: 0.85; }
+}
+
 /* Poeira estelar / partículas sutis */
 .hero-stars {
   position: absolute;

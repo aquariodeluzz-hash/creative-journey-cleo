@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useLang } from '../i18n/LangContext'
 import './Sobre.css'
 
 const fadeUp = (delay = 0) => ({
@@ -8,15 +9,9 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1], delay },
 })
 
-const credentials = [
-  { year: '1990', desc: 'Licenciatura em Artes Plásticas — Faculdade Marcelo Tupinambá (via USP)' },
-  { year: '2007', desc: 'Pós-Graduação em Terapias Alternativas — UNIFRAN (360h)' },
-  { year: '2008', desc: 'Radiestesia, Radiônica e Geobiologia — Instituto Luz' },
-  { year: '2009', desc: 'Mestrado em Reiki, Nível IIIB — Instituto Luz, São Paulo' },
-  { year: '2021', desc: 'Terapeuta Holístico Vibracional — UNIABRATH (600h)' },
-]
-
 export default function Sobre() {
+  const { t } = useLang()
+  const s = t.sobre
   return (
     <section className="sobre" id="sobre">
       <div className="container">
@@ -30,33 +25,22 @@ export default function Sobre() {
               />
             </div>
             <div className="sobre-img-badge">
-              <span>Mestra Reikiana</span>
+              <span>{s.badge1}</span>
               <span>·</span>
               <span>CRTH-BR 20173</span>
             </div>
           </motion.div>
 
           <motion.div className="sobre-text" {...fadeUp(0.15)}>
-            <span className="section-eyebrow">A Facilitadora</span>
+            <span className="section-eyebrow">{s.eyebrow}</span>
             <h2 className="section-title">
               Cleonice Carneiro<br /><em>Meirelles</em>
             </h2>
-            <p className="sobre-role">
-              Terapeuta Holística Vibracional · Mestra Reikiana · Professora de Artes Plásticas
-            </p>
-            <p className="sobre-bio">
-              Profissional de Artes Plásticas com sólida formação acadêmica e Terapeuta Holística
-              Vibracional com uma trajetória interdisciplinar consolidada ao longo de mais de
-              quatro décadas. Especialista na fusão de processos criativos e artísticos com
-              modalidades terapêuticas consagradas — especificamente a cromoterapia, a
-              aromaterapia e a radiestesia.
-            </p>
-            <p className="sobre-bio">
-              Proponente de laboratórios sensoriais exclusivos para o cenário internacional de
-              cruzeiros marítimos premium.
-            </p>
+            <p className="sobre-role">{s.role}</p>
+            <p className="sobre-bio">{s.bio1}</p>
+            <p className="sobre-bio">{s.bio2}</p>
             <div className="sobre-credentials">
-              {credentials.map(c => (
+              {s.creds.map(c => (
                 <div key={c.year} className="credential">
                   <span className="cred-year">{c.year}</span>
                   <span className="cred-desc">{c.desc}</span>

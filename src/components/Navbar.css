@@ -177,8 +177,56 @@
 }
 .nav-mobile a:hover { color: var(--warm); }
 
+/* ── Language switcher ── */
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+.lang-btn .lang-flag { font-size: 0.95rem; line-height: 1; }
+.lang-btn .lang-code { display: none; }
+.lang-btn:hover { background: rgba(0,0,0,0.05); color: var(--warm); }
+.lang-btn.active {
+  background: var(--warm);
+  color: #fff;
+}
+.lang-btn.active:hover { background: var(--warm); }
+
+/* Mobile lang strip inside overlay */
+.nav-mobile-lang {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.nav-mobile-lang .lang-btn {
+  font-size: 1rem;
+  gap: 0.4rem;
+}
+.nav-mobile-lang .lang-flag { font-size: 1.4rem; }
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-inner { max-width: 100%; }
+  .nav-lang { gap: 0.1rem; }
 }

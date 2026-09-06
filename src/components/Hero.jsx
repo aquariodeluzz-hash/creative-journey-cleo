@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useLang } from '../i18n/LangContext'
 import './Hero.css'
 
 const fadeUp = (delay = 0) => ({
@@ -8,25 +9,30 @@ const fadeUp = (delay = 0) => ({
 })
 
 export default function Hero() {
+  const { t } = useLang()
+  const h = t.hero
+
   return (
     <section className="hero" id="hero">
       <div className="hero-sky" aria-hidden="true" />
+      <div className="hero-aurora" aria-hidden="true" />
+      <div className="hero-aurora-2" aria-hidden="true" />
       <div className="hero-stars" aria-hidden="true" />
       <div className="hero-haze" aria-hidden="true" />
       <div className="hero-content">
         <motion.p className="hero-eyebrow" {...fadeUp(0.1)}>
-          Proposta de Inovação em Bem-Estar a Bordo
+          {h.eyebrow}
         </motion.p>
         <motion.h1 className="hero-title" {...fadeUp(0.25)}>
           Creative Journey<br /><em>by Cléo</em>
         </motion.h1>
         <motion.p className="hero-subtitle" {...fadeUp(0.4)}>
-          Laboratório de Arteterapia &amp; Terapias Vibracionais<br />
-          <span>Exclusivo para MSC Cruzeiros</span>
+          {h.subtitle}<br />
+          <span>{h.exclusivo}</span>
         </motion.p>
         <motion.div className="hero-divider" {...fadeUp(0.5)} />
         <motion.p className="hero-desc" {...fadeUp(0.55)}>
-          Uma experiência sensorial transformadora em alto-mar — onde a arte encontra a cura.
+          {h.desc}
         </motion.p>
         <motion.a
           href="#conceito"
@@ -38,11 +44,11 @@ export default function Hero() {
             if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' })
           }}
         >
-          Descobrir o Projeto
+          {h.btn}
         </motion.a>
       </div>
       <div className="hero-scroll">
-        <span>Rolar</span>
+        <span>{h.scroll}</span>
         <div className="scroll-line" />
       </div>
     </section>
