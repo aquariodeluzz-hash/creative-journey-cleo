@@ -182,7 +182,8 @@ export const pt = {
       { id: 'ray-4', name: 'Cristal', ray: 'IV',  virtue: 'Harmonia · Beleza' },
       { id: 'ray-5', name: 'Verde',   ray: 'V',   virtue: 'Ciência · Cura' },
       { id: 'ray-6', name: 'Rubi',    ray: 'VI',  virtue: 'Devoção · Paz' },
-      { id: 'ray-7', name: 'Violeta', ray: 'VII', virtue: 'Transmutação · Ordem' },
+      { id: 'ray-7', name: 'Violeta',      ray: 'VII',  virtue: 'Transmutação · Ordem' },
+      { id: 'ray-8', name: 'Ultravioleta', ray: 'VIII', virtue: 'Aurora · Espectro Pleno' },
     ],
   },
 }
@@ -371,7 +372,8 @@ export const en = {
       { id: 'ray-4', name: 'Crystal', ray: 'IV',  virtue: 'Harmony · Beauty' },
       { id: 'ray-5', name: 'Green',   ray: 'V',   virtue: 'Science · Healing' },
       { id: 'ray-6', name: 'Ruby',    ray: 'VI',  virtue: 'Devotion · Peace' },
-      { id: 'ray-7', name: 'Violet',  ray: 'VII', virtue: 'Transmutation · Order' },
+      { id: 'ray-7', name: 'Violet',       ray: 'VII',  virtue: 'Transmutation · Order' },
+      { id: 'ray-8', name: 'Ultraviolet',  ray: 'VIII', virtue: 'Aurora · Full Spectrum' },
     ],
   },
 }
@@ -560,7 +562,8 @@ export const es = {
       { id: 'ray-4', name: 'Cristal', ray: 'IV',  virtue: 'Armonía · Belleza' },
       { id: 'ray-5', name: 'Verde',   ray: 'V',   virtue: 'Ciencia · Curación' },
       { id: 'ray-6', name: 'Rubí',    ray: 'VI',  virtue: 'Devoción · Paz' },
-      { id: 'ray-7', name: 'Violeta', ray: 'VII', virtue: 'Transmutación · Orden' },
+      { id: 'ray-7', name: 'Violeta',      ray: 'VII',  virtue: 'Transmutación · Orden' },
+      { id: 'ray-8', name: 'Ultravioleta', ray: 'VIII', virtue: 'Aurora · Espectro Pleno' },
     ],
   },
 }
@@ -749,7 +752,8 @@ export const fr = {
       { id: 'ray-4', name: 'Cristal', ray: 'IV',  virtue: 'Harmonie · Beauté' },
       { id: 'ray-5', name: 'Vert',    ray: 'V',   virtue: 'Science · Guérison' },
       { id: 'ray-6', name: 'Rubis',   ray: 'VI',  virtue: 'Dévotion · Paix' },
-      { id: 'ray-7', name: 'Violet',  ray: 'VII', virtue: 'Transmutation · Ordre' },
+      { id: 'ray-7', name: 'Violet',       ray: 'VII',  virtue: 'Transmutation · Ordre' },
+      { id: 'ray-8', name: 'Ultraviolet',  ray: 'VIII', virtue: 'Aurore · Spectre Complet' },
     ],
   },
 }

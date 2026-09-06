@@ -4,7 +4,8 @@ import './ThemePicker.css'
 
 const SWATCHES = {
   'ray-1': '#3d5a80', 'ray-2': '#b8955a', 'ray-3': '#b5738a',
-  'ray-4': '#c4bfae', 'ray-5': '#5a7a5a', 'ray-6': '#a04545', 'ray-7': '#7a5a8a',
+  'ray-4': '#c4bfae', 'ray-5': '#5a7a5a', 'ray-6': '#a04545',
+  'ray-7': '#7a5a8a', 'ray-8': null,
 }
 
 const STORAGE_KEY = 'creative-journey-theme'
@@ -40,7 +41,7 @@ export default function ThemePicker() {
         aria-expanded={open}
         aria-label={th.openLabel(current.name)}
       >
-        <span className="tp-toggle-dot" style={{ background: SWATCHES[theme] }} />
+        <span className={`tp-toggle-dot${theme === 'ray-8' ? ' tp-swatch--uv' : ''}`} style={SWATCHES[theme] ? { background: SWATCHES[theme] } : {}} />
         <span className="tp-toggle-label">
           <span className="tp-toggle-eyebrow">{th.rayLabel}</span>
           <span className="tp-toggle-name">{current.ray} · {current.name}</span>
@@ -61,7 +62,7 @@ export default function ThemePicker() {
                 onClick={() => pick(r.id)}
                 aria-pressed={theme === r.id}
               >
-                <span className="tp-swatch" style={{ background: SWATCHES[r.id] }} />
+                <span className={`tp-swatch${r.id === 'ray-8' ? ' tp-swatch--uv' : ''}`} style={SWATCHES[r.id] ? { background: SWATCHES[r.id] } : {}} />
                 <span className="tp-item-text">
                   <span className="tp-item-name">
                     <em>{r.ray}</em> · {r.name}

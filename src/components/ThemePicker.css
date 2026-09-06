@@ -139,6 +139,22 @@
 .tp-item:hover .tp-swatch,
 .tp-item.is-active .tp-swatch { transform: scale(1.08); }
 
+/* Swatch Ultravioleta — arco-íris animado */
+.tp-swatch--uv {
+  background: conic-gradient(
+    from 0deg,
+    #ff00ff, #8800ff, #0044ff, #00ccff,
+    #00ff88, #aaff00, #ffcc00, #ff4400,
+    #ff00ff
+  ) !important;
+  animation: uvSwatchSpin 4s linear infinite;
+  border-color: transparent !important;
+}
+@keyframes uvSwatchSpin {
+  from { filter: hue-rotate(0deg)   brightness(1.1); }
+  to   { filter: hue-rotate(360deg) brightness(1.1); }
+}
+
 .tp-item-text {
   flex: 1;
   display: flex;
