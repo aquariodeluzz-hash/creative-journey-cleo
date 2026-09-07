@@ -62,11 +62,13 @@
 }
 .pilar:hover { background: var(--off-white); }
 .pilar-icon {
-  font-size: 1.2rem;
-  color: var(--warm);
-  margin-bottom: 1.4rem;
   display: block;
+  margin-bottom: 1.4rem;
+  color: var(--warm);
   transition: color var(--dur-med) var(--ease-out);
+}
+.pilar-icon svg {
+  display: block;
 }
 .pilar h3 {
   font-family: var(--font-serif);

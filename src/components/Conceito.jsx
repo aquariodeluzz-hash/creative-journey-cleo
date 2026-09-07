@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion'
 import { useLang } from '../i18n/LangContext'
+import { Sun, Flower, PaintBrush } from '@phosphor-icons/react'
 import './Conceito.css'
+
+const PILAR_ICONS = [
+  <Sun size={36} weight="duotone" />,
+  <Flower size={36} weight="duotone" />,
+  <PaintBrush size={36} weight="duotone" />,
+]
 
 const v = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -29,7 +36,7 @@ export default function Conceito() {
         <div className="pilares-grid">
           {c.pilares.map((p, i) => (
             <motion.div key={i} className="pilar" {...v(i * 0.1)}>
-              <span className="pilar-icon">{p.icon}</span>
+              <span className="pilar-icon">{PILAR_ICONS[i]}</span>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
             </motion.div>

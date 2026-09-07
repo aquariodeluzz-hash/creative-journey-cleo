@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../i18n/LangContext'
+import { Star, Clock, Layers, GraduationCap } from 'lucide-react'
 import './NumbersBar.css'
 
 function Counter({ target, suffix = '' }) {
@@ -35,10 +36,10 @@ export default function NumbersBar() {
   const { t } = useLang()
   const n = t.numbers
   const items = [
-    { target: 10,  suffix: '',   label: n.workshops },
-    { target: 40,  suffix: '+',  label: n.experiencia },
-    { target: 3,   suffix: '',   label: n.modalidades },
-    { target: 600, suffix: 'h',  label: n.formacao },
+    { target: 10,  suffix: '',   label: n.workshops,   icon: <Star size={18} strokeWidth={1.5} /> },
+    { target: 40,  suffix: '+',  label: n.experiencia, icon: <Clock size={18} strokeWidth={1.5} /> },
+    { target: 3,   suffix: '',   label: n.modalidades, icon: <Layers size={18} strokeWidth={1.5} /> },
+    { target: 600, suffix: 'h',  label: n.formacao,    icon: <GraduationCap size={18} strokeWidth={1.5} /> },
   ]
   return (
     <section className="numbers-bar">
@@ -52,6 +53,7 @@ export default function NumbersBar() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
+            <span className="number-icon">{item.icon}</span>
             <Counter target={item.target} suffix={item.suffix} />
             <span className="number-label">{item.label}</span>
           </motion.div>

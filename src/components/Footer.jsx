@@ -1,4 +1,5 @@
 import { useLang } from '../i18n/LangContext'
+import { Mail, Phone, ExternalLink } from 'lucide-react'
 import './Footer.css'
 
 export default function Footer() {
@@ -43,9 +44,9 @@ export default function Footer() {
           <span className="footer-col-label">{f.contactLabel}</span>
           <div className="footer-contact">
             <p>Cleonice Carneiro Meirelles</p>
-            <a href="mailto:art.cleo@hotmail.com">art.cleo@hotmail.com</a>
-            <a href="tel:+5511964882943">+55 (11) 96488-2943</a>
-            <a href="https://linkedin.com/in/cleonice-meirelles" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:art.cleo@hotmail.com" className="footer-contact-link"><Mail size={13} strokeWidth={1.5} />art.cleo@hotmail.com</a>
+            <a href="tel:+5511964882943" className="footer-contact-link"><Phone size={13} strokeWidth={1.5} />+55 (11) 96488-2943</a>
+            <a href="https://linkedin.com/in/cleonice-meirelles" target="_blank" rel="noopener noreferrer" className="footer-contact-link"><ExternalLink size={13} strokeWidth={1.5} />LinkedIn</a>
           </div>
         </div>
       </div>

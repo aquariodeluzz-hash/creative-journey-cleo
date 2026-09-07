@@ -43,6 +43,13 @@
   transition: color var(--dur-med) var(--ease-out);
   font-variant-numeric: tabular-nums;
 }
+.number-icon {
+  color: var(--warm);
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  transition: color var(--dur-med) var(--ease-out);
+}
 .number-label {
   font-size: 0.7rem;
   font-weight: 400;

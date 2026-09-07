@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../i18n/LangContext'
+import { Music2, Wind, Palette, Users, Heart, Sparkles, CheckCircle } from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, A11y, EffectFade, Keyboard } from 'swiper/modules'
 import Lightbox from 'yet-another-react-lightbox'
@@ -164,22 +165,22 @@ export default function WorkshopRow({ ws, index }) {
         <div className="ws-details">
           {ws.musica && (
             <div className="ws-detail-row">
-              <span className="ws-detail-label">{L.musica}</span>
+              <span className="ws-detail-label"><Music2 size={13} strokeWidth={1.5} />{L.musica}</span>
               <span className="ws-detail-val">{ws.musica}</span>
             </div>
           )}
           {ws.aroma && (
             <div className="ws-detail-row">
-              <span className="ws-detail-label">{L.aroma}</span>
+              <span className="ws-detail-label"><Wind size={13} strokeWidth={1.5} />{L.aroma}</span>
               <span className="ws-detail-val">{ws.aroma}</span>
             </div>
           )}
           <div className="ws-detail-row">
-            <span className="ws-detail-label">{L.tecnica}</span>
+            <span className="ws-detail-label"><Palette size={13} strokeWidth={1.5} />{L.tecnica}</span>
             <span className="ws-detail-val">{ws.tecnica}</span>
           </div>
           <div className="ws-detail-row">
-            <span className="ws-detail-label">{L.turma}</span>
+            <span className="ws-detail-label"><Users size={13} strokeWidth={1.5} />{L.turma}</span>
             <span className="ws-detail-val">{ws.capacidade}</span>
           </div>
         </div>
@@ -187,19 +188,19 @@ export default function WorkshopRow({ ws, index }) {
         <div className="ws-phases">
           {ws.acolhimento && (
             <div className="ws-phase">
-              <span className="ws-phase-label">{L.acolhimento}</span>
+              <span className="ws-phase-label"><Heart size={12} strokeWidth={1.5} />{L.acolhimento}</span>
               <p className="ws-phase-text">{ws.acolhimento}</p>
             </div>
           )}
           {ws.desenvolvimento && (
             <div className="ws-phase">
-              <span className="ws-phase-label">{L.desenvolvimento}</span>
+              <span className="ws-phase-label"><Sparkles size={12} strokeWidth={1.5} />{L.desenvolvimento}</span>
               <p className="ws-phase-text">{ws.desenvolvimento}</p>
             </div>
           )}
           {ws.encerramento && (
             <div className="ws-phase">
-              <span className="ws-phase-label">{L.encerramento}</span>
+              <span className="ws-phase-label"><CheckCircle size={12} strokeWidth={1.5} />{L.encerramento}</span>
               <p className="ws-phase-text">{ws.encerramento}</p>
             </div>
           )}
