@@ -15,7 +15,7 @@
 .equipe-card {
   background: var(--white);
   display: grid;
-  grid-template-columns: 170px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 2.25rem;
   padding: 2.75rem;
   border: 1px solid rgba(255,255,255,0.8);
@@ -34,13 +34,23 @@
 
 .equipe-img-wrap { overflow: hidden; flex-shrink: 0; }
 .equipe-img-wrap img {
-  width: 170px;
-  height: 230px;
+  width: 260px;
+  height: 340px;
   object-fit: cover;
-  object-position: top;
+  object-position: center 20%;
   filter: saturate(0.82) contrast(1.02);
   transition: filter var(--dur-slow) var(--ease-out),
               transform var(--dur-slow) var(--ease-out);
+}
+
+/* Cleo: rosto está na parte baixa da foto — puxa mais pra baixo */
+.equipe-card:nth-child(1) .equipe-img-wrap img {
+  object-position: center 55%;
+}
+
+/* Suri: rosto está no topo — sobe a âncora */
+.equipe-card:nth-child(2) .equipe-img-wrap img {
+  object-position: center 8%;
 }
 .equipe-card:hover .equipe-img-wrap img {
   filter: saturate(1) contrast(1);
