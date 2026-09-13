@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../i18n/LangContext'
+import CVModal from './CVModal'
 import './Sobre.css'
 
 const fadeUp = (delay = 0) => ({
@@ -12,6 +14,7 @@ const fadeUp = (delay = 0) => ({
 export default function Sobre() {
   const { t } = useLang()
   const s = t.sobre
+  const [cvOpen, setCvOpen] = useState(false)
   return (
     <section className="sobre" id="sobre">
       <div className="container">
@@ -23,6 +26,7 @@ export default function Sobre() {
                 alt="Cleonice Carneiro Meirelles"
                 className="sobre-img"
               />
+              <div className="sobre-img-tag">{s.badge2}</div>
             </div>
             <div className="sobre-img-badge">
               <span>{s.badge1}</span>
@@ -47,9 +51,22 @@ export default function Sobre() {
                 </div>
               ))}
             </div>
+
+            <motion.button
+              className="cv-btn"
+              onClick={() => setCvOpen(true)}
+              {...fadeUp(0.3)}
+            >
+              {s.cvBtn}
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.button>
           </motion.div>
         </div>
       </div>
+
+      <CVModal open={cvOpen} onClose={() => setCvOpen(false)} cvData={s.cv} />
     </section>
   )
 }

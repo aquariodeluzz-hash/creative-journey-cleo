@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../i18n/LangContext'
+import CVModal from './CVModal'
 import './Equipe.css'
 
 const v = (delay = 0) => ({
@@ -12,6 +14,10 @@ const v = (delay = 0) => ({
 export default function Equipe() {
   const { t } = useLang()
   const e = t.equipe
+  const [activeCv, setActiveCv] = useState(null)
+
+  const getCvData = (i) => i === 0 ? t.sobre.cv : t.equipe.cvSuri
+
   return (
     <section className="equipe" id="equipe">
       <div className="container">
@@ -23,8 +29,18 @@ export default function Equipe() {
         <div className="equipe-grid">
           {e.membros.map((m, i) => (
             <motion.div key={i} className="equipe-card" {...v(i * 0.12)}>
-              <div className="equipe-img-wrap">
-                <img src={m.foto} alt={m.nome} />
+              <div className="equipe-img-col">
+                <div className="equipe-img-wrap">
+                  <img src={m.foto} alt={m.nome} />
+                </div>
+                {m.hasCv && (
+                  <button className="equipe-cv-btn" onClick={() => setActiveCv(getCvData(i))}>
+                    {t.sobre.cvBtn}
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                      <path d="M1 6.5h11M7.5 2l4.5 4.5L7.5 11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                )}
               </div>
               <div className="equipe-info">
                 <h3>{m.nome}</h3>
@@ -42,6 +58,8 @@ export default function Equipe() {
           ))}
         </div>
       </div>
+
+      <CVModal open={!!activeCv} onClose={() => setActiveCv(null)} cvData={activeCv} />
     </section>
   )
 }

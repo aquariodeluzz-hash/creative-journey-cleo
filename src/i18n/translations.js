@@ -35,6 +35,7 @@ export const pt = {
   sobre: {
     eyebrow: 'A Facilitadora',
     badge1: 'Mestra Reikiana',
+    badge2: 'Terapeuta Vibracional',
     role: 'Terapeuta Holística Vibracional · Mestra Reikiana · Professora de Artes Plásticas',
     bio1: 'Profissional de Artes Plásticas com sólida formação acadêmica e Terapeuta Holística Vibracional com uma trajetória interdisciplinar consolidada ao longo de mais de quatro décadas. Especialista na fusão de processos criativos e artísticos com modalidades terapêuticas consagradas — especificamente a cromoterapia, a aromaterapia e a radiestesia.',
     bio2: 'Proponente de laboratórios sensoriais exclusivos para o cenário internacional de cruzeiros marítimos premium.',
@@ -45,6 +46,105 @@ export const pt = {
       { year: '2009', desc: 'Mestrado em Reiki, Nível IIIB — Instituto Luz, São Paulo' },
       { year: '2021', desc: 'Terapeuta Holístico Vibracional — UNIABRATH (600h)' },
     ],
+    cvBtn: 'Ver CV Completo',
+    cv: {
+      close: 'Fechar',
+      nameLine1: 'Cleonice Carneiro',
+      nameLine2: 'Meirelles',
+      titleLine: 'Terapeuta Holística Vibracional · Mestra Reikiana · Professora de Artes Plásticas',
+      contact: {
+        emailLabel: 'E-mail',
+        phoneLabel: 'Telefone',
+        email: 'art.cleo@hotmail.com',
+        phone: '+55 (11) 96488-2943',
+        registro: 'CRTH-BR 20173 (ABRATH)',
+        linkedin: 'linkedin.com/in/cleonice-meirelles',
+        nationalityLabel: 'Nacionalidade',
+        registroLabel: 'Registro Profissional',
+        linkedinLabel: 'LinkedIn',
+        languagesLabel: 'Idiomas',
+        nationality: 'Brasileira',
+        languages: 'Português, Espanhol básico',
+      },
+      perfil: {
+        title: 'Perfil Profissional',
+        body: 'Profissional de Artes Plásticas com sólida formação acadêmica e Terapeuta Holística Vibracional (Mestra Reikiana) com uma trajetória interdisciplinar consolidada ao longo de mais de quatro décadas. Especialista na fusão de processos criativos e artísticos com modalidades terapêuticas consagradas — especificamente a cromoterapia, a aromaterapia e a radiestesia —, visando à harmonização cognitiva, descompressão emocional e relaxamento profundo. Experiente na facilitação de dinâmicas de bem-estar para públicos diversos, com sólida experiência de mais de duas décadas na educação pública, e proponente de laboratórios sensoriais exclusivos para o cenário internacional de cruzeiros marítimos premium.',
+      },
+      competencias: {
+        title: 'Competências Centrais',
+        items: [
+          { label: 'Terapias Vibracionais e Sensoriais', body: 'Aplicação clínica combinada de aromaterapia (óleos essenciais) e cromoterapia (frequências do espectro solar) para estabilização sistêmica.' },
+          { label: 'Artes Plásticas e Expressão Criativa', body: 'Ampla bagagem técnica e pedagógica nas artes visuais, utilizando o ato de pintar e criar como ferramentas ativas de prevenção e redução do estresse.' },
+          { label: 'Alinhamento Energético Avançado', body: 'Maestria em Reiki (Nível IIIB) e conhecimentos práticos em Radiestesia e Geobiologia voltados para o equilíbrio ambiental e pessoal.' },
+          { label: 'Liderança de Grupos e Didática', body: 'Habilidade no acolhimento, regência de turmas e facilitação de dinâmicas coletivas focadas em bem-estar emocional, mindfulness e saúde integrativa.' },
+        ],
+      },
+      experiencia: {
+        title: 'Experiência Profissional',
+        items: [
+          {
+            cargo: 'Terapeuta Holística e Consultora em Artes Visuais',
+            local: 'Consultório Privado / Projetos de Práticas Integrativas',
+            periodo: '2021 – Presente',
+            bullets: [
+              'Desenvolvimento e facilitação de workshops integrados que unem pintura expressiva com esquemas personalizados de aromaterapia para a redução de estados agudos de ansiedade e estresse.',
+              'Condução de sessões individuais e coletivas utilizando Reiki e técnicas vibracionais para reequilíbrio energético, promovendo clareza mental e resiliência emocional.',
+            ],
+          },
+          {
+            cargo: 'Professora de Artes Plásticas e Educação Artística',
+            local: 'Secretaria da Educação do Estado de São Paulo (Ensino Público Estadual)',
+            periodo: '1995 – 2016 (Aposentada)',
+            bullets: [
+              'Atuação por 21 anos no ensino público do Estado de São Paulo, lecionando artes visuais e coordenando atividades pedagógicas e criativas para grandes grupos de alunos.',
+              'Desenvolvimento de metodologias práticas para estimular a expressão emocional, a sensibilidade estética e a inclusão através da vivência artística plástica.',
+              'Vasta experiência em gestão de dinâmicas coletivas, comunicação clara e adaptação didática para diferentes perfis de público de forma acolhedora.',
+            ],
+          },
+        ],
+      },
+      formacao: {
+        title: 'Formação Acadêmica e Certificações',
+        items: [
+          {
+            titulo: 'Pós-Graduação Lato Sensu em Terapias Alternativas',
+            inst: 'UNIFRAN — Universidade de Franca',
+            periodo: '2007 – 2008',
+            desc: 'Especialização de nível superior com carga horária de 360 horas. Formação avançada em Aromaterapia, Cromoterapia, Terapia Floral, Reiki, Reflexologia e Anatomia Energética.',
+          },
+          {
+            titulo: 'Formação Técnica em Terapeuta Holístico Vibracional',
+            inst: 'UNIABRATH — Associação Brasileira dos Terapeutas Holísticos',
+            periodo: '2021',
+            desc: 'Curso de capacitação técnica abrangente com carga horária de 600 horas, focado em ética terapêutica, práticas integrativas e sistemas vibracionais de saúde.',
+          },
+          {
+            titulo: 'Mestrado em Reiki (Reiki Master — Nível IIIB)',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2009',
+            desc: 'Habilitação no Sistema Usui Natural de Cura com carga horária de 64 horas. Capacitação prática e teórica para transmissão energética, harmonização e docência em Reiki.',
+          },
+          {
+            titulo: 'Licenciatura Plena em Artes Plásticas e Educação Artística',
+            inst: 'Faculdade Marcelo Tupinambá (Registrado via USP)',
+            periodo: 'Concluída em 1990',
+            desc: 'Diploma de Graduação Superior focado no desenvolvimento de técnicas em estúdio, história da arte, pedagogia da expressão e o uso dos sentidos visuais como manifestação psicoterapêutica.',
+          },
+          {
+            titulo: 'Curso Básico de Radiestesia, Radiônica e Geobiologia',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2008',
+            desc: 'Curso complementar focado na análise de frequências ambientais, medição de desequilíbrios bioenergéticos e neutralização de estresse geopático.',
+          },
+          {
+            titulo: 'Credenciamento Profissional Ativo',
+            inst: 'ABRATH',
+            periodo: 'Válido até 04/2027',
+            desc: 'Carteira de Identidade Profissional de Terapeuta Holístico nº CRTH-BR 20173.',
+          },
+        ],
+      },
+    },
   },
   conceito: {
     eyebrow: 'O Conceito',
@@ -118,10 +218,11 @@ export const pt = {
         nome: 'Cleonice Carneiro Meirelles',
         cargo: 'Expertise — Facilitadora Principal',
         bio: 'Terapeuta Holística Vibracional, Mestra Reikiana e Professora de Artes Plásticas com mais de quatro décadas de trajetória. Proponente do Creative Journey para a MSC Cruzeiros.',
-        tags: ['Arteterapia', 'Reiki Nível IIIB', 'Cromoterapia', 'Aromaterapia'],
+        tags: ['Arteterapia', 'Reiki Nível III B', 'Aromaterapia', 'Reflexologia', 'Radiestesia', 'Terapia Vibracional'],
         email: 'art.cleo@hotmail.com',
         tel: '+55 (11) 96488-2943',
         foto: '/ws/perfil/WhatsApp Image 2026-08-31 at 09.51.10.jpeg',
+        hasCv: true,
       },
       {
         nome: 'Suri Meirelles',
@@ -131,8 +232,48 @@ export const pt = {
         email: 'suri.selina@gmail.com',
         tel: '+55 (15) 99760-5022',
         foto: '/ws/suri/suri-profissional.jpeg',
+        hasCv: true,
       },
     ],
+    cvSuri: {
+      close: 'Fechar',
+      nameLine1: 'Suri',
+      nameLine2: 'Meirelles',
+      titleLine: 'Assistente da Expertise "Creative Journey" · MSC Cruzeiros',
+      contact: {
+        email: 'suri.selina@gmail.com',
+        phone: '+55 (15) 99760-5022',
+        emailLabel: 'E-mail',
+        phoneLabel: 'Telefone',
+      },
+      perfil: {
+        title: 'Perfil Profissional',
+        body: 'Jovem comunicativa e dedicada com sólida vivência prática nas artes visuais, fotografia e artes cênicas. Demonstra grande habilidade em expressão artística, trabalho em equipe e relacionamento interpessoal. Busca atuar como Assistente da Expertise "Creative Journey", oferecendo suporte dinâmico, criativo e organizacional às oficinas de Arteterapia e Terapias Vibracionais desenvolvidas para os passageiros a bordo dos cruzeiros marítimos da MSC.',
+      },
+      competencias: {
+        title: 'Habilidades & Experiência Prática',
+        items: [
+          { label: 'Fotografia (3 anos)', body: 'Domínio de enquadramento, sensibilidade visual, registro de eventos e olhar artístico para captação de momentos.' },
+          { label: 'Teatro & Expressão Cênica (2 anos)', body: 'Desenvoltura em comunicação, expressão corporal, oratória e facilidade de interação com o público.' },
+          { label: 'Artes Visuais & Manuais', body: 'Prática e aptidão em desenho, técnicas de artes plásticas e criação artesanal.' },
+          { label: 'Comunicação Interpessoal', body: 'Facilidade no acolhimento de pessoas, escuta ativa e trabalho em grupo em ambientes colaborativos.' },
+        ],
+      },
+      idiomas: {
+        title: 'Idiomas',
+        items: [
+          { lang: 'Português', level: 'Nativo' },
+          { lang: 'Inglês', level: 'Fluente' },
+          { lang: 'Japonês', level: 'Básico' },
+        ],
+      },
+      formacao: {
+        title: 'Formação Acadêmica',
+        items: [
+          { titulo: 'Ensino Médio', inst: '', periodo: 'Em andamento', desc: '' },
+        ],
+      },
+    },
   },
   contato: {
     eyebrow: 'Proposta Comercial',
@@ -145,7 +286,7 @@ export const pt = {
     totalLabel: 'Total por Workshop',
     investLabel: 'Investimento Total',
     investSub: '10 Workshops + Materiais',
-    note: '*Valor referente a 10 workshops completos de 4 horas de execução + 1 hora de preparação cada, incluindo todos os materiais para 40 pessoas por sessão. Condição especial de lançamento para primeira temporada em navios MSC.',
+    note: '*Honorários referentes a 1 workshop completo (2h manhã + 2h tarde = 4h de execução), para 20 pessoas por sessão. Custo total de materiais para 10 workshops: € 940,00.',
     form: {
       nome: 'Nome',
       nomePlaceholder: 'Seu nome completo',
@@ -158,8 +299,8 @@ export const pt = {
       submit: 'Enviar Proposta',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 100,00/h', total: '€ 500,00' },
-      { prof: 'Suri Meirelles', cargo: 'Assistente', hora: '€ 30,00/h', total: '€ 150,00' },
+      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
+      { prof: 'Suri Meirelles', cargo: 'Assistente', hora: '€ 34,00/h', total: '€ 136,00' },
     ],
   },
   footer: {
@@ -225,6 +366,7 @@ export const en = {
   sobre: {
     eyebrow: 'The Facilitator',
     badge1: 'Reiki Master',
+    badge2: 'Vibrational Therapist',
     role: 'Vibrational Holistic Therapist · Reiki Master · Fine Arts Teacher',
     bio1: 'Fine Arts professional with solid academic background and Vibrational Holistic Therapist with an interdisciplinary career spanning more than four decades. Specialist in fusing creative and artistic processes with established therapeutic modalities — specifically chromotherapy, aromatherapy, and radiesthesia.',
     bio2: 'Proposer of exclusive sensory laboratories for the international premium cruise industry.',
@@ -235,6 +377,105 @@ export const en = {
       { year: '2009', desc: 'Reiki Mastership, Level IIIB — Instituto Luz, São Paulo' },
       { year: '2021', desc: 'Vibrational Holistic Therapist — UNIABRATH (600h)' },
     ],
+    cvBtn: 'View Full CV',
+    cv: {
+      close: 'Close',
+      nameLine1: 'Cleonice Carneiro',
+      nameLine2: 'Meirelles',
+      titleLine: 'Vibrational Holistic Therapist · Reiki Master · Fine Arts Teacher',
+      contact: {
+        emailLabel: 'Email',
+        phoneLabel: 'Phone',
+        email: 'art.cleo@hotmail.com',
+        phone: '+55 (11) 96488-2943',
+        registro: 'CRTH-BR 20173 (ABRATH)',
+        linkedin: 'linkedin.com/in/cleonice-meirelles',
+        nationalityLabel: 'Nationality',
+        registroLabel: 'Professional Registration',
+        linkedinLabel: 'LinkedIn',
+        languagesLabel: 'Languages',
+        nationality: 'Brazilian',
+        languages: 'Portuguese, Basic Spanish',
+      },
+      perfil: {
+        title: 'Professional Profile',
+        body: 'Fine Arts professional with solid academic background and Vibrational Holistic Therapist (Reiki Master) with an interdisciplinary career spanning more than four decades. Specialist in fusing creative and artistic processes with established therapeutic modalities — specifically chromotherapy, aromatherapy, and radiesthesia — aimed at cognitive harmonisation, emotional decompression and deep relaxation. Experienced in facilitating well-being dynamics for diverse audiences, with over two decades in public education, and proposer of exclusive sensory laboratories for the international premium cruise industry.',
+      },
+      competencias: {
+        title: 'Core Competencies',
+        items: [
+          { label: 'Vibrational & Sensory Therapies', body: 'Combined clinical application of aromatherapy (essential oils) and chromotherapy (solar spectrum frequencies) for systemic stabilisation.' },
+          { label: 'Fine Arts & Creative Expression', body: 'Broad technical and pedagogical background in visual arts, using the act of painting and creating as active tools for stress prevention and reduction.' },
+          { label: 'Advanced Energy Alignment', body: 'Reiki Mastership (Level IIIB) and practical knowledge in Radiesthesia and Geobiology for environmental and personal balance.' },
+          { label: 'Group Leadership & Teaching', body: 'Skilled in welcoming, leading groups and facilitating collective dynamics focused on emotional well-being, mindfulness and integrative health.' },
+        ],
+      },
+      experiencia: {
+        title: 'Professional Experience',
+        items: [
+          {
+            cargo: 'Holistic Therapist & Visual Arts Consultant',
+            local: 'Private Practice / Integrative Practices Projects',
+            periodo: '2021 – Present',
+            bullets: [
+              'Development and facilitation of integrated workshops combining expressive painting with personalised aromatherapy schemes for the reduction of acute anxiety and stress.',
+              'Conducting individual and group sessions using Reiki and vibrational techniques for energetic rebalancing, promoting mental clarity and emotional resilience.',
+            ],
+          },
+          {
+            cargo: 'Fine Arts & Art Education Teacher',
+            local: 'São Paulo State Department of Education (State Public School System)',
+            periodo: '1995 – 2016 (Retired)',
+            bullets: [
+              '21 years in São Paulo public education, teaching visual arts and coordinating pedagogical and creative activities for large student groups.',
+              'Development of practical methodologies to stimulate emotional expression, aesthetic sensitivity and inclusion through hands-on artistic experience.',
+              'Extensive experience in collective dynamics management, clear communication and didactic adaptation for diverse audiences in a welcoming environment.',
+            ],
+          },
+        ],
+      },
+      formacao: {
+        title: 'Academic Background & Certifications',
+        items: [
+          {
+            titulo: 'Lato Sensu Postgraduate in Alternative Therapies',
+            inst: 'UNIFRAN — University of Franca',
+            periodo: '2007 – 2008',
+            desc: 'Higher specialisation with 360 hours. Advanced training in Aromatherapy, Chromotherapy, Floral Therapy, Reiki, Reflexology and Energy Anatomy.',
+          },
+          {
+            titulo: 'Technical Training in Vibrational Holistic Therapy',
+            inst: 'UNIABRATH — Brazilian Association of Holistic Therapists',
+            periodo: '2021',
+            desc: 'Comprehensive 600-hour technical programme focused on therapeutic ethics, integrative practices and vibrational health systems.',
+          },
+          {
+            titulo: 'Reiki Mastership (Reiki Master — Level IIIB)',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2009',
+            desc: 'Qualification in the Usui Natural Healing System (64 hours). Practical and theoretical training for energy transmission, harmonisation and Reiki teaching.',
+          },
+          {
+            titulo: 'Full Degree in Fine Arts & Art Education',
+            inst: 'Faculdade Marcelo Tupinambá (Registered via USP)',
+            periodo: 'Completed 1990',
+            desc: 'Higher education degree focused on studio techniques, art history, pedagogy of expression and the use of visual senses as psychotherapeutic manifestation.',
+          },
+          {
+            titulo: 'Basic Course in Radiesthesia, Radionics and Geobiology',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2008',
+            desc: 'Complementary course focused on environmental frequency analysis, bioenergetic imbalance measurement and geopathic stress neutralisation.',
+          },
+          {
+            titulo: 'Active Professional Accreditation',
+            inst: 'ABRATH',
+            periodo: 'Valid until 04/2027',
+            desc: 'Professional Identity Card of Holistic Therapist nº CRTH-BR 20173.',
+          },
+        ],
+      },
+    },
   },
   conceito: {
     eyebrow: 'The Concept',
@@ -308,10 +549,11 @@ export const en = {
         nome: 'Cleonice Carneiro Meirelles',
         cargo: 'Lead Expert — Principal Facilitator',
         bio: 'Vibrational Holistic Therapist, Reiki Master and Fine Arts Teacher with over four decades of experience. Proposer of the Creative Journey for MSC Cruises.',
-        tags: ['Art Therapy', 'Reiki Level IIIB', 'Chromotherapy', 'Aromatherapy'],
+        tags: ['Art Therapy', 'Reiki Level III B', 'Aromatherapy', 'Reflexology', 'Radiesthesia', 'Vibrational Therapy'],
         email: 'art.cleo@hotmail.com',
         tel: '+55 (11) 96488-2943',
         foto: '/ws/perfil/WhatsApp Image 2026-08-31 at 09.51.10.jpeg',
+        hasCv: true,
       },
       {
         nome: 'Suri Meirelles',
@@ -321,8 +563,48 @@ export const en = {
         email: 'suri.selina@gmail.com',
         tel: '+55 (15) 99760-5022',
         foto: '/ws/suri/suri-profissional.jpeg',
+        hasCv: true,
       },
     ],
+    cvSuri: {
+      close: 'Close',
+      nameLine1: 'Suri',
+      nameLine2: 'Meirelles',
+      titleLine: 'Assistant to the Expertise "Creative Journey" · MSC Cruises',
+      contact: {
+        email: 'suri.selina@gmail.com',
+        phone: '+55 (15) 99760-5022',
+        emailLabel: 'Email',
+        phoneLabel: 'Phone',
+      },
+      perfil: {
+        title: 'Professional Profile',
+        body: 'Communicative and dedicated young artist with solid practical experience in visual arts, photography and performing arts. Demonstrates great aptitude for artistic expression, teamwork and interpersonal relationships. Seeks to work as Assistant to the Expertise "Creative Journey", offering dynamic, creative and organisational support to the Artetherapy and Vibrational Therapy workshops developed for passengers aboard MSC cruise ships.',
+      },
+      competencias: {
+        title: 'Skills & Practical Experience',
+        items: [
+          { label: 'Photography (3 years)', body: 'Mastery of framing, visual sensitivity, event documentation and artistic eye for capturing moments.' },
+          { label: 'Theatre & Performing Arts (2 years)', body: 'Confidence in communication, body expression, public speaking and ease of interaction with audiences.' },
+          { label: 'Visual & Craft Arts', body: 'Practice and aptitude in drawing, fine arts techniques and handcraft creation.' },
+          { label: 'Interpersonal Communication', body: 'Ease in welcoming people, active listening and group work in collaborative environments.' },
+        ],
+      },
+      idiomas: {
+        title: 'Languages',
+        items: [
+          { lang: 'Portuguese', level: 'Native' },
+          { lang: 'English', level: 'Fluent' },
+          { lang: 'Japanese', level: 'Basic' },
+        ],
+      },
+      formacao: {
+        title: 'Academic Background',
+        items: [
+          { titulo: 'Secondary Education', inst: '', periodo: 'In progress', desc: '' },
+        ],
+      },
+    },
   },
   contato: {
     eyebrow: 'Commercial Proposal',
@@ -335,7 +617,7 @@ export const en = {
     totalLabel: 'Total per Workshop',
     investLabel: 'Total Investment',
     investSub: '10 Workshops + Materials',
-    note: '*Value for 10 complete workshops of 4 hours of execution + 1 hour of preparation each, including all materials for 40 people per session. Special launch offer for the first season on MSC ships.',
+    note: '*Fees for 1 complete workshop (2h morning + 2h afternoon = 4h execution), for 20 people per session. Total materials cost for 10 workshops: € 940.00.',
     form: {
       nome: 'Name',
       nomePlaceholder: 'Your full name',
@@ -348,8 +630,8 @@ export const en = {
       submit: 'Send Proposal',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expert', hora: '€ 100.00/h', total: '€ 500.00' },
-      { prof: 'Suri Meirelles', cargo: 'Assistant', hora: '€ 30.00/h', total: '€ 150.00' },
+      { prof: 'Cleonice Meirelles', cargo: 'Expert', hora: '€ 133.00/h', total: '€ 532.00' },
+      { prof: 'Suri Meirelles', cargo: 'Assistant', hora: '€ 34.00/h', total: '€ 136.00' },
     ],
   },
   footer: {
@@ -415,6 +697,7 @@ export const es = {
   sobre: {
     eyebrow: 'La Facilitadora',
     badge1: 'Maestra Reikiana',
+    badge2: 'Terapeuta Vibracional',
     role: 'Terapeuta Holística Vibracional · Maestra Reikiana · Profesora de Artes Plásticas',
     bio1: 'Profesional de Artes Plásticas con sólida formación académica y Terapeuta Holística Vibracional con una trayectoria interdisciplinar consolidada a lo largo de más de cuatro décadas. Especialista en la fusión de procesos creativos y artísticos con modalidades terapéuticas consagradas — específicamente la cromoterapia, la aromaterapia y la radiestesia.',
     bio2: 'Proponente de laboratorios sensoriales exclusivos para el escenario internacional de cruceros marítimos premium.',
@@ -425,6 +708,105 @@ export const es = {
       { year: '2009', desc: 'Maestría en Reiki, Nivel IIIB — Instituto Luz, São Paulo' },
       { year: '2021', desc: 'Terapeuta Holístico Vibracional — UNIABRATH (600h)' },
     ],
+    cvBtn: 'Ver CV Completo',
+    cv: {
+      close: 'Cerrar',
+      nameLine1: 'Cleonice Carneiro',
+      nameLine2: 'Meirelles',
+      titleLine: 'Terapeuta Holística Vibracional · Maestra Reikiana · Profesora de Artes Plásticas',
+      contact: {
+        emailLabel: 'Correo',
+        phoneLabel: 'Teléfono',
+        email: 'art.cleo@hotmail.com',
+        phone: '+55 (11) 96488-2943',
+        registro: 'CRTH-BR 20173 (ABRATH)',
+        linkedin: 'linkedin.com/in/cleonice-meirelles',
+        nationalityLabel: 'Nacionalidad',
+        registroLabel: 'Registro Profesional',
+        linkedinLabel: 'LinkedIn',
+        languagesLabel: 'Idiomas',
+        nationality: 'Brasileña',
+        languages: 'Portugués, Español básico',
+      },
+      perfil: {
+        title: 'Perfil Profesional',
+        body: 'Profesional de Artes Plásticas con sólida formación académica y Terapeuta Holística Vibracional (Maestra Reikiana) con una trayectoria interdisciplinar consolidada a lo largo de más de cuatro décadas. Especialista en la fusión de procesos creativos y artísticos con modalidades terapéuticas consagradas — específicamente la cromoterapia, la aromaterapia y la radiestesia —, con el objetivo de armonización cognitiva, descompresión emocional y relajación profunda. Con experiencia en la facilitación de dinámicas de bienestar para públicos diversos, más de dos décadas en educación pública, y proponente de laboratorios sensoriales exclusivos para el escenario internacional de cruceros marítimos premium.',
+      },
+      competencias: {
+        title: 'Competencias Centrales',
+        items: [
+          { label: 'Terapias Vibracionales y Sensoriales', body: 'Aplicación clínica combinada de aromaterapia (aceites esenciales) y cromoterapia (frecuencias del espectro solar) para la estabilización sistémica.' },
+          { label: 'Artes Plásticas y Expresión Creativa', body: 'Amplio bagaje técnico y pedagógico en las artes visuales, utilizando el acto de pintar y crear como herramientas activas de prevención y reducción del estrés.' },
+          { label: 'Alineación Energética Avanzada', body: 'Maestría en Reiki (Nivel IIIB) y conocimientos prácticos en Radiestesia y Geobiología para el equilibrio ambiental y personal.' },
+          { label: 'Liderazgo de Grupos y Didáctica', body: 'Habilidad en el acogimiento, dirección de grupos y facilitación de dinámicas colectivas enfocadas en bienestar emocional, mindfulness y salud integrativa.' },
+        ],
+      },
+      experiencia: {
+        title: 'Experiencia Profesional',
+        items: [
+          {
+            cargo: 'Terapeuta Holística y Consultora en Artes Visuales',
+            local: 'Consultorio Privado / Proyectos de Prácticas Integrativas',
+            periodo: '2021 – Presente',
+            bullets: [
+              'Desarrollo y facilitación de talleres integrados que unen pintura expresiva con esquemas personalizados de aromaterapia para la reducción de estados agudos de ansiedad y estrés.',
+              'Conducción de sesiones individuales y colectivas utilizando Reiki y técnicas vibracionales para el reequilibrio energético, promoviendo claridad mental y resiliencia emocional.',
+            ],
+          },
+          {
+            cargo: 'Profesora de Artes Plásticas y Educación Artística',
+            local: 'Secretaría de Educación del Estado de São Paulo (Enseñanza Pública Estatal)',
+            periodo: '1995 – 2016 (Jubilada)',
+            bullets: [
+              '21 años en la educación pública del Estado de São Paulo, enseñando artes visuales y coordinando actividades pedagógicas y creativas para grandes grupos de alumnos.',
+              'Desarrollo de metodologías prácticas para estimular la expresión emocional, la sensibilidad estética y la inclusión a través de la vivencia artística plástica.',
+              'Amplia experiencia en gestión de dinámicas colectivas, comunicación clara y adaptación didáctica para diferentes perfiles de público de forma acogedora.',
+            ],
+          },
+        ],
+      },
+      formacao: {
+        title: 'Formación Académica y Certificaciones',
+        items: [
+          {
+            titulo: 'Postgrado Lato Sensu en Terapias Alternativas',
+            inst: 'UNIFRAN — Universidad de Franca',
+            periodo: '2007 – 2008',
+            desc: 'Especialización de nivel superior con 360 horas. Formación avanzada en Aromaterapia, Cromoterapia, Terapia Floral, Reiki, Reflexología y Anatomía Energética.',
+          },
+          {
+            titulo: 'Formación Técnica en Terapeuta Holístico Vibracional',
+            inst: 'UNIABRATH — Asociación Brasileña de Terapeutas Holísticos',
+            periodo: '2021',
+            desc: 'Programa técnico integral de 600 horas, enfocado en ética terapéutica, prácticas integrativas y sistemas vibracionales de salud.',
+          },
+          {
+            titulo: 'Maestría en Reiki (Reiki Master — Nivel IIIB)',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2009',
+            desc: 'Habilitación en el Sistema Usui Natural de Curación (64 horas). Capacitación práctica y teórica para transmisión energética, armonización y docencia en Reiki.',
+          },
+          {
+            titulo: 'Licenciatura Plena en Artes Plásticas y Educación Artística',
+            inst: 'Faculdade Marcelo Tupinambá (Registrado via USP)',
+            periodo: 'Concluida en 1990',
+            desc: 'Diploma de Educación Superior enfocado en técnicas de estudio, historia del arte, pedagogía de la expresión y el uso de los sentidos visuales como manifestación psicoterapéutica.',
+          },
+          {
+            titulo: 'Curso Básico de Radiestesia, Radiónica y Geobiología',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2008',
+            desc: 'Curso complementario enfocado en el análisis de frecuencias ambientales, medición de desequilibrios bioenergéticos y neutralización del estrés geopático.',
+          },
+          {
+            titulo: 'Acreditación Profesional Activa',
+            inst: 'ABRATH',
+            periodo: 'Válido hasta 04/2027',
+            desc: 'Carné de Identidad Profesional de Terapeuta Holístico nº CRTH-BR 20173.',
+          },
+        ],
+      },
+    },
   },
   conceito: {
     eyebrow: 'El Concepto',
@@ -498,10 +880,11 @@ export const es = {
         nome: 'Cleonice Carneiro Meirelles',
         cargo: 'Expertise — Facilitadora Principal',
         bio: 'Terapeuta Holística Vibracional, Maestra Reikiana y Profesora de Artes Plásticas con más de cuatro décadas de trayectoria. Proponente del Creative Journey para MSC Cruceros.',
-        tags: ['Arteterapia', 'Reiki Nivel IIIB', 'Cromoterapia', 'Aromaterapia'],
+        tags: ['Arteterapia', 'Reiki Nivel III B', 'Aromaterapia', 'Reflexología', 'Radiestesia', 'Terapia Vibracional'],
         email: 'art.cleo@hotmail.com',
         tel: '+55 (11) 96488-2943',
         foto: '/ws/perfil/WhatsApp Image 2026-08-31 at 09.51.10.jpeg',
+        hasCv: true,
       },
       {
         nome: 'Suri Meirelles',
@@ -511,8 +894,48 @@ export const es = {
         email: 'suri.selina@gmail.com',
         tel: '+55 (15) 99760-5022',
         foto: '/ws/suri/suri-profissional.jpeg',
+        hasCv: true,
       },
     ],
+    cvSuri: {
+      close: 'Cerrar',
+      nameLine1: 'Suri',
+      nameLine2: 'Meirelles',
+      titleLine: 'Asistente de la Expertise "Creative Journey" · MSC Cruceros',
+      contact: {
+        email: 'suri.selina@gmail.com',
+        phone: '+55 (15) 99760-5022',
+        emailLabel: 'Correo',
+        phoneLabel: 'Teléfono',
+      },
+      perfil: {
+        title: 'Perfil Profesional',
+        body: 'Joven comunicativa y dedicada con sólida vivencia práctica en las artes visuales, fotografía y artes escénicas. Demuestra gran habilidad en expresión artística, trabajo en equipo y relaciones interpersonales. Busca actuar como Asistente de la Expertise "Creative Journey", ofreciendo apoyo dinámico, creativo y organizacional a los talleres de Arteterapia y Terapias Vibracionales desarrollados para los pasajeros a bordo de los cruceros de la MSC.',
+      },
+      competencias: {
+        title: 'Habilidades & Experiencia Práctica',
+        items: [
+          { label: 'Fotografía (3 años)', body: 'Dominio de encuadre, sensibilidad visual, registro de eventos y mirada artística para captar momentos.' },
+          { label: 'Teatro & Expresión Escénica (2 años)', body: 'Desenvoltura en comunicación, expresión corporal, oratoria y facilidad de interacción con el público.' },
+          { label: 'Artes Visuales & Manuales', body: 'Práctica y aptitud en dibujo, técnicas de artes plásticas y creación artesanal.' },
+          { label: 'Comunicación Interpersonal', body: 'Facilidad en el acogimiento de personas, escucha activa y trabajo en grupo en ambientes colaborativos.' },
+        ],
+      },
+      idiomas: {
+        title: 'Idiomas',
+        items: [
+          { lang: 'Portugués', level: 'Nativo' },
+          { lang: 'Inglés', level: 'Fluido' },
+          { lang: 'Japonés', level: 'Básico' },
+        ],
+      },
+      formacao: {
+        title: 'Formación Académica',
+        items: [
+          { titulo: 'Enseñanza Media', inst: '', periodo: 'En curso', desc: '' },
+        ],
+      },
+    },
   },
   contato: {
     eyebrow: 'Propuesta Comercial',
@@ -525,7 +948,7 @@ export const es = {
     totalLabel: 'Total por Taller',
     investLabel: 'Inversión Total',
     investSub: '10 Talleres + Materiales',
-    note: '*Valor referente a 10 talleres completos de 4 horas de ejecución + 1 hora de preparación cada uno, incluyendo todos los materiales para 40 personas por sesión. Condición especial de lanzamiento para la primera temporada en barcos MSC.',
+    note: '*Honorarios referentes a 1 taller completo (2h mañana + 2h tarde = 4h de ejecución), para 20 personas por sesión. Costo total de materiales para 10 talleres: € 940,00.',
     form: {
       nome: 'Nombre',
       nomePlaceholder: 'Su nombre completo',
@@ -538,8 +961,8 @@ export const es = {
       submit: 'Enviar Propuesta',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 100,00/h', total: '€ 500,00' },
-      { prof: 'Suri Meirelles', cargo: 'Asistente', hora: '€ 30,00/h', total: '€ 150,00' },
+      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
+      { prof: 'Suri Meirelles', cargo: 'Asistente', hora: '€ 34,00/h', total: '€ 136,00' },
     ],
   },
   footer: {
@@ -605,6 +1028,7 @@ export const fr = {
   sobre: {
     eyebrow: 'La Facilitatrice',
     badge1: 'Maître Reiki',
+    badge2: 'Thérapeute Vibrationnelle',
     role: 'Thérapeute Holistique Vibrationnelle · Maître Reiki · Professeure des Beaux-Arts',
     bio1: 'Professionnelle des Beaux-Arts avec une solide formation académique et Thérapeute Holistique Vibrationnelle avec une trajectoire interdisciplinaire de plus de quatre décennies. Spécialiste dans la fusion des processus créatifs et artistiques avec des modalités thérapeutiques consacrées — spécifiquement la chromothérapie, l\'aromathérapie et la radiesthésie.',
     bio2: 'Proposante de laboratoires sensoriels exclusifs pour le scénario international des croisières maritimes premium.',
@@ -615,6 +1039,105 @@ export const fr = {
       { year: '2009', desc: 'Maîtrise en Reiki, Niveau IIIB — Instituto Luz, São Paulo' },
       { year: '2021', desc: 'Thérapeute Holistique Vibrationnel — UNIABRATH (600h)' },
     ],
+    cvBtn: 'Voir CV Complet',
+    cv: {
+      close: 'Fermer',
+      nameLine1: 'Cleonice Carneiro',
+      nameLine2: 'Meirelles',
+      titleLine: 'Thérapeute Holistique Vibrationnelle · Maître Reiki · Professeure des Beaux-Arts',
+      contact: {
+        emailLabel: 'E-mail',
+        phoneLabel: 'Téléphone',
+        email: 'art.cleo@hotmail.com',
+        phone: '+55 (11) 96488-2943',
+        registro: 'CRTH-BR 20173 (ABRATH)',
+        linkedin: 'linkedin.com/in/cleonice-meirelles',
+        nationalityLabel: 'Nationalité',
+        registroLabel: 'Enregistrement Professionnel',
+        linkedinLabel: 'LinkedIn',
+        languagesLabel: 'Langues',
+        nationality: 'Brésilienne',
+        languages: 'Portugais, Espagnol de base',
+      },
+      perfil: {
+        title: 'Profil Professionnel',
+        body: 'Professionnelle des Beaux-Arts avec une solide formation académique et Thérapeute Holistique Vibrationnelle (Maître Reiki) avec une trajectoire interdisciplinaire de plus de quatre décennies. Spécialiste dans la fusion des processus créatifs et artistiques avec des modalités thérapeutiques consacrées — spécifiquement la chromothérapie, l\'aromathérapie et la radiesthésie —, visant l\'harmonisation cognitive, la décompression émotionnelle et la relaxation profonde. Expérimentée dans la facilitation de dynamiques de bien-être pour des publics variés, avec plus de deux décennies dans l\'éducation publique, et proposante de laboratoires sensoriels exclusifs pour le marché international des croisières maritimes premium.',
+      },
+      competencias: {
+        title: 'Compétences Clés',
+        items: [
+          { label: 'Thérapies Vibrationnelles et Sensorielles', body: 'Application clinique combinée d\'aromathérapie (huiles essentielles) et de chromothérapie (fréquences du spectre solaire) pour la stabilisation systémique.' },
+          { label: 'Beaux-Arts et Expression Créative', body: 'Large bagage technique et pédagogique dans les arts visuels, utilisant l\'acte de peindre et de créer comme outils actifs de prévention et réduction du stress.' },
+          { label: 'Alignement Énergétique Avancé', body: 'Maîtrise Reiki (Niveau IIIB) et connaissances pratiques en Radiesthésie et Géobiologie pour l\'équilibre environnemental et personnel.' },
+          { label: 'Leadership de Groupe et Pédagogie', body: 'Aptitude à l\'accueil, à la direction de groupes et à la facilitation de dynamiques collectives axées sur le bien-être émotionnel, la pleine conscience et la santé intégrative.' },
+        ],
+      },
+      experiencia: {
+        title: 'Expérience Professionnelle',
+        items: [
+          {
+            cargo: 'Thérapeute Holistique et Consultante en Arts Visuels',
+            local: 'Cabinet Privé / Projets de Pratiques Intégratives',
+            periodo: '2021 – Présent',
+            bullets: [
+              'Développement et facilitation d\'ateliers intégrés alliant peinture expressive et schémas d\'aromathérapie personnalisés pour la réduction des états aigus d\'anxiété et de stress.',
+              'Animation de séances individuelles et collectives utilisant le Reiki et des techniques vibrationnelles pour le rééquilibrage énergétique, favorisant la clarté mentale et la résilience émotionnelle.',
+            ],
+          },
+          {
+            cargo: 'Professeure de Beaux-Arts et d\'Éducation Artistique',
+            local: 'Secrétariat de l\'Éducation de l\'État de São Paulo (Enseignement Public)',
+            periodo: '1995 – 2016 (Retraitée)',
+            bullets: [
+              '21 ans dans l\'enseignement public de l\'État de São Paulo, enseignant les arts visuels et coordonnant des activités pédagogiques et créatives pour de grands groupes d\'élèves.',
+              'Développement de méthodologies pratiques pour stimuler l\'expression émotionnelle, la sensibilité esthétique et l\'inclusion à travers l\'expérience artistique plastique.',
+              'Vaste expérience dans la gestion de dynamiques collectives, la communication claire et l\'adaptation didactique pour différents profils de public dans un cadre bienveillant.',
+            ],
+          },
+        ],
+      },
+      formacao: {
+        title: 'Formation Académique et Certifications',
+        items: [
+          {
+            titulo: 'Post-graduation Lato Sensu en Thérapies Alternatives',
+            inst: 'UNIFRAN — Université de Franca',
+            periodo: '2007 – 2008',
+            desc: 'Spécialisation de niveau supérieur avec 360 heures. Formation avancée en Aromathérapie, Chromothérapie, Thérapie Florale, Reiki, Réflexologie et Anatomie Énergétique.',
+          },
+          {
+            titulo: 'Formation Technique en Thérapeute Holistique Vibrationnel',
+            inst: 'UNIABRATH — Association Brésilienne des Thérapeutes Holistiques',
+            periodo: '2021',
+            desc: 'Programme technique complet de 600 heures, axé sur l\'éthique thérapeutique, les pratiques intégratives et les systèmes de santé vibrationnels.',
+          },
+          {
+            titulo: 'Maîtrise Reiki (Reiki Master — Niveau IIIB)',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2009',
+            desc: 'Habilitation au Système Usui de Guérison Naturelle (64 heures). Formation pratique et théorique pour la transmission énergétique, l\'harmonisation et l\'enseignement du Reiki.',
+          },
+          {
+            titulo: 'Licence Complète en Beaux-Arts et Éducation Artistique',
+            inst: 'Faculdade Marcelo Tupinambá (Enregistré via USP)',
+            periodo: 'Obtenu en 1990',
+            desc: 'Diplôme supérieur axé sur les techniques de studio, l\'histoire de l\'art, la pédagogie de l\'expression et l\'utilisation des sens visuels comme manifestation psychothérapeutique.',
+          },
+          {
+            titulo: 'Cours de Base en Radiesthésie, Radionique et Géobiologie',
+            inst: 'Instituto Luz — São Paulo',
+            periodo: '2008',
+            desc: 'Cours complémentaire axé sur l\'analyse des fréquences environnementales, la mesure des déséquilibres bioénergétiques et la neutralisation du stress géopathique.',
+          },
+          {
+            titulo: 'Accréditation Professionnelle Active',
+            inst: 'ABRATH',
+            periodo: 'Valide jusqu\'au 04/2027',
+            desc: 'Carte d\'Identité Professionnelle de Thérapeute Holistique nº CRTH-BR 20173.',
+          },
+        ],
+      },
+    },
   },
   conceito: {
     eyebrow: 'Le Concept',
@@ -688,10 +1211,11 @@ export const fr = {
         nome: 'Cleonice Carneiro Meirelles',
         cargo: 'Expertise — Facilitatrice Principale',
         bio: 'Thérapeute Holistique Vibrationnelle, Maître Reiki et Professeure des Beaux-Arts avec plus de quatre décennies de parcours. Proposante du Creative Journey pour MSC Croisières.',
-        tags: ['Artthérapie', 'Reiki Niveau IIIB', 'Chromothérapie', 'Aromathérapie'],
+        tags: ['Artthérapie', 'Reiki Niveau III B', 'Aromathérapie', 'Réflexologie', 'Radiesthésie', 'Thérapie Vibrationnelle'],
         email: 'art.cleo@hotmail.com',
         tel: '+55 (11) 96488-2943',
         foto: '/ws/perfil/WhatsApp Image 2026-08-31 at 09.51.10.jpeg',
+        hasCv: true,
       },
       {
         nome: 'Suri Meirelles',
@@ -701,8 +1225,48 @@ export const fr = {
         email: 'suri.selina@gmail.com',
         tel: '+55 (15) 99760-5022',
         foto: '/ws/suri/suri-profissional.jpeg',
+        hasCv: true,
       },
     ],
+    cvSuri: {
+      close: 'Fermer',
+      nameLine1: 'Suri',
+      nameLine2: 'Meirelles',
+      titleLine: 'Assistante de l\'Expertise "Creative Journey" · MSC Croisières',
+      contact: {
+        email: 'suri.selina@gmail.com',
+        phone: '+55 (15) 99760-5022',
+        emailLabel: 'E-mail',
+        phoneLabel: 'Téléphone',
+      },
+      perfil: {
+        title: 'Profil Professionnel',
+        body: 'Jeune artiste communicative et dévouée avec une solide expérience pratique dans les arts visuels, la photographie et les arts de la scène. Démontre une grande aptitude pour l\'expression artistique, le travail en équipe et les relations interpersonnelles. Elle aspire à travailler comme Assistante de l\'Expertise "Creative Journey", offrant un soutien dynamique, créatif et organisationnel aux ateliers d\'Artthérapie et de Thérapies Vibrationnelles développés pour les passagers à bord des croisières MSC.',
+      },
+      competencias: {
+        title: 'Compétences & Expérience Pratique',
+        items: [
+          { label: 'Photographie (3 ans)', body: 'Maîtrise du cadrage, sensibilité visuelle, documentation d\'événements et regard artistique pour saisir les moments.' },
+          { label: 'Théâtre & Expression Scénique (2 ans)', body: 'Aisance en communication, expression corporelle, prise de parole en public et facilité d\'interaction avec les audiences.' },
+          { label: 'Arts Visuels & Manuels', body: 'Pratique et aptitude en dessin, techniques des beaux-arts et création artisanale.' },
+          { label: 'Communication Interpersonnelle', body: 'Facilité à accueillir les gens, écoute active et travail en groupe dans des environnements collaboratifs.' },
+        ],
+      },
+      idiomas: {
+        title: 'Langues',
+        items: [
+          { lang: 'Portugais', level: 'Natif' },
+          { lang: 'Anglais', level: 'Courant' },
+          { lang: 'Japonais', level: 'Notions' },
+        ],
+      },
+      formacao: {
+        title: 'Formation Académique',
+        items: [
+          { titulo: 'Enseignement Secondaire', inst: '', periodo: 'En cours', desc: '' },
+        ],
+      },
+    },
   },
   contato: {
     eyebrow: 'Proposition Commerciale',
@@ -715,7 +1279,7 @@ export const fr = {
     totalLabel: 'Total par Atelier',
     investLabel: 'Investissement Total',
     investSub: '10 Ateliers + Matériaux',
-    note: '*Valeur pour 10 ateliers complets de 4 heures d\'exécution + 1 heure de préparation chacun, incluant tous les matériaux pour 40 personnes par session. Condition spéciale de lancement pour la première saison sur les navires MSC.',
+    note: '*Honoraires pour 1 atelier complet (2h matin + 2h après-midi = 4h d\'exécution), pour 20 personnes par session. Coût total des matériaux pour 10 ateliers : € 940,00.',
     form: {
       nome: 'Nom',
       nomePlaceholder: 'Votre nom complet',
@@ -728,8 +1292,8 @@ export const fr = {
       submit: 'Envoyer la Proposition',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 100,00/h', total: '€ 500,00' },
-      { prof: 'Suri Meirelles', cargo: 'Assistante', hora: '€ 30,00/h', total: '€ 150,00' },
+      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
+      { prof: 'Suri Meirelles', cargo: 'Assistante', hora: '€ 34,00/h', total: '€ 136,00' },
     ],
   },
   footer: {

@@ -24,6 +24,23 @@
   position: relative;
   overflow: visible;
 }
+.sobre-img-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: #7a4f9a;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  pointer-events: none;
+}
+
 .sobre-img-frame::before {
   content: '';
   position: absolute;
@@ -125,6 +142,38 @@
   font-weight: 300;
   line-height: 1.65;
   color: var(--ink-mid);
+}
+
+/* Botão CV */
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2.25rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--warm);
+  border-radius: 1px;
+  background: transparent;
+  color: var(--warm);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out);
+}
+.cv-btn:hover {
+  background: var(--warm);
+  color: var(--white);
+}
+.cv-btn svg {
+  flex-shrink: 0;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.cv-btn:hover svg {
+  transform: translateX(3px);
 }
 
 @media (max-width: 1024px) {

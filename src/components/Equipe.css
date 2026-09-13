@@ -32,6 +32,12 @@
               0 4px 12px rgba(0,0,0,0.06);
 }
 
+.equipe-img-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex-shrink: 0;
+}
 .equipe-img-wrap { overflow: hidden; flex-shrink: 0; }
 .equipe-img-wrap img {
   width: 260px;
@@ -101,6 +107,35 @@
 .equipe-card:hover .equipe-tags span {
   border-color: var(--warm-light);
 }
+
+.equipe-cv-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--warm);
+  border-top: none;
+  background: transparent;
+  color: var(--warm);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+.equipe-cv-btn:hover {
+  background: var(--warm);
+  color: var(--white);
+}
+.equipe-cv-btn svg {
+  flex-shrink: 0;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.equipe-cv-btn:hover svg { transform: translateX(3px); }
 
 .equipe-contact { display: flex; flex-direction: column; gap: 0.4rem; }
 .equipe-contact a {
