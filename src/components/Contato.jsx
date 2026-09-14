@@ -34,16 +34,6 @@ export default function Contato() {
                   <span>{r.total}</span>
                 </div>
               ))}
-              <div className="invest-row invest-subtotal">
-                <span>{c.totalLabel}</span>
-                <span></span>
-                <span>€ 668,00</span>
-              </div>
-              <div className="invest-row invest-total">
-                <span>{c.investLabel}<br /><em>{c.investSub}</em></span>
-                <span></span>
-                <span>€ 7.620,00</span>
-              </div>
               <div className="invest-row invest-note">
                 <span><em>{c.note}</em></span>
               </div>

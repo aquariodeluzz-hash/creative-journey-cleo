@@ -287,6 +287,7 @@ export const workshops = [
               ws('ws10', 'mandala-01-bege-claro.png'),
               ws('ws10', 'mandala-02-bege.png'),
               ws('ws10', 'mandala-03-bege-amarelo.png'),
+              ws('ws10', 'mandala-04-preta.png'),
               ws('ws10', 'mandala-04-bege-amarelo-forte.png'),
             ],
   },

@@ -204,9 +204,9 @@ export const pt = {
     titleLine1: 'Vozes do',
     titleEm: 'Projeto',
     vozes: [
-      { quote: 'O universo é puramente dinâmico, emitindo energia e vibrando em frequências contínuas. Nós, seres humanos, funcionamos como receptores biológicos que captam e reagem a essas energias.', autor: 'Cleonice Meirelles', contexto: 'Manifesto Creative Journey' },
-      { quote: 'Conduzir o passageiro a mudar conscientemente a sua estação interna — afastando-se das frequências da ansiedade moderna para se sintonizar com as frequências restauradoras da alegria e da paz profunda.', autor: 'Cleonice Meirelles', contexto: 'Objetivo central do projeto' },
-      { quote: 'Pequenos gestos de carinho e arte transformam a viagem em uma jornada inesquecível de conexão e aprendizado.', autor: 'Cleonice Meirelles', contexto: 'Proposta de Ambientação' },
+      { quote: 'O universo é puramente dinâmico, emitindo energia e vibrando em frequências contínuas. Nós, seres humanos, funcionamos como receptores biológicos que captam e reagem a essas energias.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Manifesto Creative Journey' },
+      { quote: 'Conduzir o passageiro a mudar conscientemente a sua estação interna — afastando-se das frequências da ansiedade moderna para se sintonizar com as frequências restauradoras da alegria e da paz profunda.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Objetivo central do projeto' },
+      { quote: 'Pequenos gestos de carinho e arte transformam a viagem em uma jornada inesquecível de conexão e aprendizado.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Proposta de Ambientação' },
     ],
   },
   equipe: {
@@ -299,7 +299,7 @@ export const pt = {
       submit: 'Enviar Proposta',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
+      { prof: 'Cleonice Carneiro Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
       { prof: 'Suri Meirelles', cargo: 'Assistente', hora: '€ 34,00/h', total: '€ 136,00' },
     ],
   },
@@ -535,9 +535,9 @@ export const en = {
     titleLine1: 'Voices of the',
     titleEm: 'Project',
     vozes: [
-      { quote: 'The universe is purely dynamic, emitting energy and vibrating at continuous frequencies. We, as human beings, function as biological receptors that capture and react to these energies.', autor: 'Cleonice Meirelles', contexto: 'Creative Journey Manifesto' },
-      { quote: 'To guide passengers to consciously change their inner station — moving away from the frequencies of modern anxiety to tune into the restorative frequencies of joy and deep peace.', autor: 'Cleonice Meirelles', contexto: 'Project\'s central objective' },
-      { quote: 'Small gestures of care and art transform the journey into an unforgettable adventure of connection and learning.', autor: 'Cleonice Meirelles', contexto: 'Ambiance Proposal' },
+      { quote: 'The universe is purely dynamic, emitting energy and vibrating at continuous frequencies. We, as human beings, function as biological receptors that capture and react to these energies.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Creative Journey Manifesto' },
+      { quote: 'To guide passengers to consciously change their inner station — moving away from the frequencies of modern anxiety to tune into the restorative frequencies of joy and deep peace.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Project\'s central objective' },
+      { quote: 'Small gestures of care and art transform the journey into an unforgettable adventure of connection and learning.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Ambiance Proposal' },
     ],
   },
   equipe: {
@@ -630,7 +630,7 @@ export const en = {
       submit: 'Send Proposal',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expert', hora: '€ 133.00/h', total: '€ 532.00' },
+      { prof: 'Cleonice Carneiro Meirelles', cargo: 'Expert', hora: '€ 133.00/h', total: '€ 532.00' },
       { prof: 'Suri Meirelles', cargo: 'Assistant', hora: '€ 34.00/h', total: '€ 136.00' },
     ],
   },
@@ -866,9 +866,9 @@ export const es = {
     titleLine1: 'Voces del',
     titleEm: 'Proyecto',
     vozes: [
-      { quote: 'El universo es puramente dinámico, emitiendo energía y vibrando en frecuencias continuas. Nosotros, los seres humanos, funcionamos como receptores biológicos que captan y reaccionan a estas energías.', autor: 'Cleonice Meirelles', contexto: 'Manifiesto Creative Journey' },
-      { quote: 'Guiar al pasajero a cambiar conscientemente su estación interna — alejándose de las frecuencias de la ansiedad moderna para sintonizarse con las frecuencias restauradoras de la alegría y la paz profunda.', autor: 'Cleonice Meirelles', contexto: 'Objetivo central del proyecto' },
-      { quote: 'Pequeños gestos de cariño y arte transforman el viaje en una jornada inolvidable de conexión y aprendizaje.', autor: 'Cleonice Meirelles', contexto: 'Propuesta de Ambientación' },
+      { quote: 'El universo es puramente dinámico, emitiendo energía y vibrando en frecuencias continuas. Nosotros, los seres humanos, funcionamos como receptores biológicos que captan y reaccionan a estas energías.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Manifiesto Creative Journey' },
+      { quote: 'Guiar al pasajero a cambiar conscientemente su estación interna — alejándose de las frecuencias de la ansiedad moderna para sintonizarse con las frecuencias restauradoras de la alegría y la paz profunda.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Objetivo central del proyecto' },
+      { quote: 'Pequeños gestos de cariño y arte transforman el viaje en una jornada inolvidable de conexión y aprendizaje.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Propuesta de Ambientación' },
     ],
   },
   equipe: {
@@ -961,7 +961,7 @@ export const es = {
       submit: 'Enviar Propuesta',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
+      { prof: 'Cleonice Carneiro Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
       { prof: 'Suri Meirelles', cargo: 'Asistente', hora: '€ 34,00/h', total: '€ 136,00' },
     ],
   },
@@ -1197,9 +1197,9 @@ export const fr = {
     titleLine1: 'Voix du',
     titleEm: 'Projet',
     vozes: [
-      { quote: 'L\'univers est purement dynamique, émettant de l\'énergie et vibrant à des fréquences continues. Nous, êtres humains, fonctionnons comme des récepteurs biologiques qui captent et réagissent à ces énergies.', autor: 'Cleonice Meirelles', contexto: 'Manifeste Creative Journey' },
-      { quote: 'Guider le passager à changer consciemment sa station intérieure — en s\'éloignant des fréquences de l\'anxiété moderne pour se syntoniser avec les fréquences restauratrices de la joie et de la paix profonde.', autor: 'Cleonice Meirelles', contexto: 'Objectif central du projet' },
-      { quote: 'De petits gestes d\'amour et d\'art transforment le voyage en un périple inoubliable de connexion et d\'apprentissage.', autor: 'Cleonice Meirelles', contexto: 'Proposition d\'Ambiance' },
+      { quote: 'L\'univers est purement dynamique, émettant de l\'énergie et vibrant à des fréquences continues. Nous, êtres humains, fonctionnons comme des récepteurs biologiques qui captent et réagissent à ces énergies.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Manifeste Creative Journey' },
+      { quote: 'Guider le passager à changer consciemment sa station intérieure — en s\'éloignant des fréquences de l\'anxiété moderne pour se syntoniser avec les fréquences restauratrices de la joie et de la paix profonde.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Objectif central du projet' },
+      { quote: 'De petits gestes d\'amour et d\'art transforment le voyage en un périple inoubliable de connexion et d\'apprentissage.', autor: 'Cleonice Carneiro Meirelles', contexto: 'Proposition d\'Ambiance' },
     ],
   },
   equipe: {
@@ -1292,7 +1292,7 @@ export const fr = {
       submit: 'Envoyer la Proposition',
     },
     rows: [
-      { prof: 'Cleonice Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
+      { prof: 'Cleonice Carneiro Meirelles', cargo: 'Expertise', hora: '€ 133,00/h', total: '€ 532,00' },
       { prof: 'Suri Meirelles', cargo: 'Assistante', hora: '€ 34,00/h', total: '€ 136,00' },
     ],
   },
